@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>个人博客-绑定用户</title>
+    <link rel="stylesheet" type="text/css" href="gg/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="gg/css/main.css">
+    <script type="text/javascript" src="gg/js/host.js"></script>
+    <script type="text/javascript" src="gg/js/jquery.min.js"></script>
+
+    <script type="text/javascript" src="gg/js/vue-2.5.16.js"></script>
+    <script type="text/javascript" src="gg/js/axios-0.18.0.min.js"></script>
+</head>
+<body>
+    <div>
+        <div class="pass_change_finish" id = 'zhu'>请稍后...</div>
+        <div id="ci">
+            <div class="register_con">
+
+
+                <div class="r_con fr" id="app">
+                    <div class="reg_title clearfix">
+                        <h1>绑定用户</h1>
+                    </div>
+                    <div class="reg_form clearfix"  v-cloak>
+                        <form id="reg_form" v-on:submit.prevent="on_submit">
+                        <ul>
+                            <li>
+                                <label>账号:</label>
+                                <input type="text" v-model="mobile"  name="phone" id="phone">
+                                <span v-show="error_phone" class="error_tip">{{ error_phone_message }}</span>
+                            </li>
+                            <li>
+                                <label>密码:</label>
+                                <input type="password" v-model="password" v-on:blur="check_pwd" name="pwd" id="pwd">
+                                <span v-show="error_password" class="error_tip">密码最少8位，最长20位</span>
+                            </li>
+
+
+                            <li class="reg_sub">
+                                <input type="submit" @click="on_submit" value="保 存" name="">
+                            </li>
+                        </ul>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer no-mp">
+                <div class="foot_link">
+                    <a href="#">关于我们</a>
+                    <span>|</span>
+                    <a href="#">联系我们</a>
+                    <span>|</span>
+                    <a href="#">招聘人才</a>
+                    <span>|</span>
+                    <a href="#">友情链接</a>
+                </div>
+                <p>CopyRight © 2016 北京美多商业股份有限公司 All Rights Reserved</p>
+                <p>电话：010-****888    京ICP备*******8号</p>
+            </div>
+        </div >
+    </div>
+    <script type="text/javascript" src="gg/js/oauth_callback.js"></script>
+</body>
+</html>

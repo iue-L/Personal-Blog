@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html xmlns:wb="http://open.weibo.com/wb">
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta name="referrer" content="no-referrer"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title> HeannyBlog | 个人博客</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="浪子"/>
+    <meta name="keywords"
+          content="浪子"/>
+    <!-- Facebook and Twitter integration -->
+    <meta property="og:title" content=""/>
+    <meta property="og:image" content=""/>
+    <meta property="og:url" content=""/>
+    <meta property="og:site_name" content=""/>
+    <meta property="og:description" content=""/>
+    <meta name="twitter:title" content=""/>
+    <meta name="twitter:image" content=""/>
+    <meta name="twitter:url" content=""/>
+    <meta name="twitter:card" content=""/>
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="/gg/css/animate.css">
+    <!-- Icomoon Icon Fonts-->
+    <link rel="stylesheet" href="/gg/css/icomoon.css">
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" href="/gg/css/bootstrap.css">
+    <!-- Flexslider  -->
+    <link rel="stylesheet" href="/gg/css/flexslider.css">
+    <!-- Theme style  -->
+    <link rel="stylesheet" href="/gg/css/style.css">
+    <link rel="stylesheet" href="/gg/css/blog.css">
+    <link rel="stylesheet" href="/gg/css/loading.css">
+    <link rel="stylesheet" href="/gg/css/page_style.css">
+    <!-- Modernizr JS -->
+    <script src="/gg/js/host.js"></script>
+    <script src="/gg/js/vue-2.5.16.js"></script>
+    <script src="/gg/js/axios-0.18.0.min.js"></script>
+    <script src="/gg/js/modernizr-2.6.2.min.js"></script>
+    <script>
+        var t={
+       getQueryString:function(name){
+          var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+          var r = window.location.search.substr(1).match(reg);
+          if(r!=null)
+            return  decodeURI(r[2]);
+            return null;
+       }
+   }
+
+        var cityId=t.getQueryString("id");//城市id
+        var user_id = sessionStorage.user_id || localStorage.user_id;
+        var token = sessionStorage.token || localStorage.token;
+        if (!(user_id && token)) {
+            location.href = '/gg/login.html?next=/gg/past/'+cityId+'.html?id='+cityId;
+        }
+    </script>
+    <!-- FOR IE9 below -->
+    <!--[if lt IE 9]>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div id="fh5co-page" >
+    <div class="app" v-cloak>
+    <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
+    <aside id="fh5co-aside" role="complementary" class="border js-fullheight">
+        <h1 id="fh5co-logo"><a href="/gg/blogs.html">HEANNY.CN</a></h1>
+        <nav id="fh5co-main-menu" role="navigation">
+            <ul >
+                   <li class="index_li"><a href="/gg/blogs.html">Home</a></li>
+                <li class="blog_li"><a href="/gg/blog.html">
+                        Blog<span class="badge blogNum">[[counts]]</span>
+                    </a></li>
+
+
+                <li class="gbook_li"><a href="/gg/gbook.html" title="留言">
+                        Gbook<span class="badge gbookNum">[[quantity]]</span>
+                    </a></li>
+
+                <li class="login_li"><a href="/gg/login.html">Sign In</a></li>
+              <li id='user_li'><a href='/gg/user.html' title='用户中心'>[[ name ]]</a></li>
+                <li id ='logo_li'><a href='#' @click="logout" title='注销'>LOGOUT</a> </li></ul></ul>
+        </nav>
+        <div class="fh5co-footer">
+
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <ul>
+                <li>
+                    <a href="#" target="_blank" id="Twitter" data-toggle="tooltip" data-placement="top" title="Twitter">
+                        <i class="icon-twitter2"></i></a>
+                </li>
+                <li>
+                    <a href="http://weibo.com/hua199501" target="_blank" id="WeiBo" data-toggle="tooltip"
+                       data-placement="top"
+                       title="WeiBo">
+                        <i class="icon-sina-weibo"></i></a>
+                </li>
+                <li>
+                    <a href="#" target="_blank" id="Linkedin" data-toggle="tooltip" data-placement="top"
+                       title="Linkedin">
+                        <i class="icon-linkedin22"></i></a>
+                </li>
+                <li>
+                    <a href="https://github.com/beichenyulu" target="_blank" id="Github" data-toggle="tooltip"
+                       data-placement="top" title="Github">
+                        <i class="icon-github"></i></a>
+                </li>
+            </ul>
+        </div>
+
+    </aside>
+
+    <div id="fh5co-main">
+        <aside id="fh5co-hero">
+            <!--正文-->
+            <div class=" col-padding animate-box fadeInLeft animated post_body" id="P_note_box">
+                <div class="row">
+                                            <div class="col-md-8">
+                            <div class="blog_title">
+                                <h1 class="fh5co-heading-colored animate-box" style="    padding-top: 10px;">
+                                                                        Kivy关于dll错误问题 <a class="blog_collect" href="javascript:collect(-1)"><img src="/images/collect.png" alt=""></a>                                </h1>
+                                <div class="animate-box fadeInLeft"
+                                     style="    padding-left: 20px;    padding-top: 10px;">
+                                    <span class="dtime" style="padding-left: 15px ">2019-04-11</span>
+                                    <span class="viewnum" style="padding-left: 15px ;margin-left: 30px;">
+									11534							</span>
+                                </div>
+                                <div class="cloud ">
+                                    <ul style="padding-top: 0 !important;">
+                                        <a href="javascropt:void(0);" class="animate-box">pycharm</a><a href="javascropt:void(0);" class="animate-box">破解</a>                                    </ul>
+                                </div>
+
+                            </div>
+                            <!--<div class='top_50'></div>-->
+                            <div class="col-md-12 col-xs-12 NoteBox" style="background-color: white">
+                                <div class="NoteBody animate-box">
+                                    <!--?= stripslashes($dataarr->content) ?-->
+
+                                                                       <!--?= stripslashes($dataarr->content) ?-->                                    <pre name="code" style="overflow-y: hidden; font-family: Consolas, Inconsolata, Courier, monospace; padding: 8px 16px 4px 56px; margin-top: 0px; margin-bottom: 24px; line-height: 22px; background-color: rgb(246, 248, 250); border-width: initial; border-style: none; border-color: initial; outline: 0px; position: relative;">from&nbsp;kivy.app&nbsp;import&nbsp;Appfrom&nbsp;kivy.uix.button&nbsp;import&nbsp;Buttonclass&nbsp;TestApp(App):
+&nbsp;&nbsp;&nbsp;&nbsp;def&nbsp;build(self):
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;Button(text="Hello,kivy")
+TestApp().run()1234567</pre><p style="margin-top: 0px; margin-bottom: 16px; color: rgb(79, 79, 79); outline: 0px; line-height: 26px; text-align: justify; word-break: break-all; font-family: -apple-system, &quot;SF UI Text&quot;, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif, SimHei, SimSun; background-color: rgb(255, 255, 255);">输出结果：</p><pre name="code" style="overflow-y: hidden; font-family: Consolas, Inconsolata, Courier, monospace; padding: 8px 16px 4px 56px; margin-top: 0px; margin-bottom: 24px; line-height: 22px; background-color: rgb(246, 248, 250); border-width: initial; border-style: none; border-color: initial; outline: 0px; position: relative;">[INFO&nbsp;&nbsp;&nbsp;]&nbsp;[Logger&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]&nbsp;Record&nbsp;log&nbsp;in&nbsp;C:Usersusth1.kivylogskivy_17-06-09_17.txt[INFO&nbsp;&nbsp;&nbsp;]&nbsp;[Kivy&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]&nbsp;v1.10.0[INFO&nbsp;&nbsp;&nbsp;]&nbsp;[Python&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]&nbsp;v3.6.1&nbsp;(v3.6.1:69c0db5,&nbsp;Mar&nbsp;21&nbsp;2017,&nbsp;17:54:52)&nbsp;[MSC&nbsp;v.1900&nbsp;32&nbsp;bit&nbsp;(Intel)][INFO&nbsp;&nbsp;&nbsp;]&nbsp;[Factory&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]&nbsp;194&nbsp;symbols&nbsp;loaded[INFO&nbsp;&nbsp;&nbsp;]&nbsp;[Image&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]&nbsp;Providers:&nbsp;img_tex,&nbsp;img_dds,&nbsp;img_pil,&nbsp;img_gif&nbsp;(img_sdl2,&nbsp;img_ffpyplayer&nbsp;ignored)[INFO&nbsp;&nbsp;&nbsp;]&nbsp;[Text&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]&nbsp;Provider:&nbsp;pil(["text_sdl2"]&nbsp;ignored)[CRITICAL]&nbsp;[Window&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]&nbsp;Unable&nbsp;to&nbsp;find&nbsp;any&nbsp;valuable&nbsp;Window&nbsp;provider.
+sdl2&nbsp;-&nbsp;ImportError:&nbsp;DLL&nbsp;load&nbsp;failed:&nbsp;找不到指定的模块。
+&nbsp;&nbsp;File&nbsp;"C:Usersusth1AppDataLocalProgramsPythonPython36-32libsite-packageskivycore\__init__.py",&nbsp;line&nbsp;59,&nbsp;in&nbsp;core_select_lib
+&nbsp;&nbsp;&nbsp;&nbsp;fromlist=[modulename],&nbsp;level=0)
+&nbsp;&nbsp;File&nbsp;"C:Usersusth1AppDataLocalProgramsPythonPython36-32libsite-packageskivycorewindowwindow_sdl2.py",&nbsp;line&nbsp;26,&nbsp;in&nbsp;&lt;module&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;from&nbsp;kivy.core.window._window_sdl2&nbsp;import&nbsp;_WindowSDL2Storage[CRITICAL]&nbsp;[App&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]&nbsp;Unable&nbsp;to&nbsp;get&nbsp;a&nbsp;Window,&nbsp;abort.
+&nbsp;Exception&nbsp;ignored&nbsp;in:&nbsp;"kivy.properties.dpi2px"
+&nbsp;Traceback&nbsp;(most&nbsp;recent&nbsp;call&nbsp;last):
+&nbsp;&nbsp;&nbsp;File&nbsp;"C:Usersusth1AppDataLocalProgramsPythonPython36-32libsite-packageskivyutils.py",&nbsp;line&nbsp;496,&nbsp;in&nbsp;__get__
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;retval&nbsp;=&nbsp;self.func(inst)
+&nbsp;&nbsp;&nbsp;File&nbsp;"C:Usersusth1AppDataLocalProgramsPythonPython36-32libsite-packageskivymetrics.py",&nbsp;line&nbsp;174,&nbsp;in&nbsp;dpi
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EventLoop.ensure_window()
+&nbsp;&nbsp;&nbsp;File&nbsp;"C:Usersusth1AppDataLocalProgramsPythonPython36-32libsite-packageskivyase.py",&nbsp;line&nbsp;127,&nbsp;in&nbsp;ensure_window
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sys.exit(1)
+&nbsp;SystemExit:&nbsp;1[CRITICAL]&nbsp;[App&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]&nbsp;Unable&nbsp;to&nbsp;get&nbsp;a&nbsp;Window,&nbsp;abort.
+
+
+------------------
+(program&nbsp;exited&nbsp;with&nbsp;code:&nbsp;1)
+
+请按任意键继续.&nbsp;.&nbsp;.123456789101112131415161718192021222324252627282930</pre><p style="margin-top: 0px; margin-bottom: 16px; color: rgb(79, 79, 79); outline: 0px; line-height: 26px; text-align: justify; word-break: break-all; font-family: -apple-system, &quot;SF UI Text&quot;, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif, SimHei, SimSun; background-color: rgb(255, 255, 255);">接着我在GitHub上查询了相关文档：</p><blockquote style="padding: 16px; margin-top: 0px; margin-bottom: 24px; font-size: 17.5px; border-left-color: rgb(221, 223, 228); color: rgb(51, 51, 51); outline: 0px; background: rgb(238, 240, 244); overflow: auto; word-wrap: normal; word-break: break-all; font-family: -apple-system, &quot;SF UI Text&quot;, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif, SimHei, SimSun;"><p style="margin-top: 0px; color: rgb(153, 153, 153); outline: 0px; text-align: justify; line-height: 22px; word-break: break-all;"><a href="https://github.com/kivy/kivy/issues/3889" rel="nofollow" target="_blank" style="color: rgb(103, 149, 181); transition-property: all; outline: 0px; cursor: pointer; word-break: break-all;">https://github.com/kivy/kivy/issues/3889</a>&nbsp;<br style="outline: 0px; word-break: break-all;">下载了kivy.deps.sdl2：&nbsp;<br style="outline: 0px; word-break: break-all;">C:Usersusth1&gt;pip install kivy.deps.sdl2</p></blockquote><p style="margin-top: 0px; margin-bottom: 16px; color: rgb(79, 79, 79); outline: 0px; line-height: 26px; text-align: justify; word-break: break-all; font-family: -apple-system, &quot;SF UI Text&quot;, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif, SimHei, SimSun; background-color: rgb(255, 255, 255);">输出结果：</p><pre name="code" style="overflow-y: hidden; font-family: Consolas, Inconsolata, Courier, monospace; padding: 8px 16px 4px 56px; margin-top: 0px; margin-bottom: 24px; line-height: 22px; background-color: rgb(246, 248, 250); border-width: initial; border-style: none; border-color: initial; outline: 0px; position: relative;">[INFO&nbsp;&nbsp;&nbsp;]&nbsp;[Logger&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]&nbsp;Record&nbsp;log&nbsp;in&nbsp;C:Usersusth1.kivylogskivy_17-06-09_16.txt[INFO&nbsp;&nbsp;&nbsp;]&nbsp;[Kivy&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]&nbsp;v1.10.0[INFO&nbsp;&nbsp;&nbsp;]&nbsp;[Python&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]&nbsp;v3.6.1&nbsp;(v3.6.1:69c0db5,&nbsp;Mar&nbsp;21&nbsp;2017,&nbsp;17:54:52)&nbsp;[MSC&nbsp;v.1900&nbsp;32&nbsp;bit&nbsp;(Intel)][INFO&nbsp;&nbsp;&nbsp;]&nbsp;[Factory&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]&nbsp;194&nbsp;symbols&nbsp;loaded[INFO&nbsp;&nbsp;&nbsp;]&nbsp;[Image&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]&nbsp;Providers:&nbsp;img_tex,&nbsp;img_dds,&nbsp;img_sdl2,&nbsp;img_pil,&nbsp;img_gif&nbsp;(img_ffpyplayer&nbsp;ignored)[INFO&nbsp;&nbsp;&nbsp;]&nbsp;[Text&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]&nbsp;Provider:&nbsp;sdl2[INFO&nbsp;&nbsp;&nbsp;]&nbsp;[OSC&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]&nbsp;using&nbsp;&lt;thread&gt;&nbsp;for&nbsp;socket[INFO&nbsp;&nbsp;&nbsp;]&nbsp;[Window&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]&nbsp;Provider:&nbsp;sdl2[CRITICAL]&nbsp;[Window&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]&nbsp;Unable&nbsp;to&nbsp;find&nbsp;any&nbsp;valuable&nbsp;Window&nbsp;provider.
+sdl2&nbsp;-&nbsp;ImportError:&nbsp;DLL&nbsp;load&nbsp;failed:&nbsp;找不到指定的模块。
+&nbsp;&nbsp;File&nbsp;"C:Usersusth1AppDataLocalProgramsPythonPython36-32libsite-packageskivycore\__init__.py",&nbsp;line&nbsp;67,&nbsp;in&nbsp;core_select_lib
+&nbsp;&nbsp;&nbsp;&nbsp;cls&nbsp;=&nbsp;cls()
+&nbsp;&nbsp;File&nbsp;"C:Usersusth1AppDataLocalProgramsPythonPython36-32libsite-packageskivycorewindowwindow_sdl2.py",&nbsp;line&nbsp;140,&nbsp;in&nbsp;__init__
+&nbsp;&nbsp;&nbsp;&nbsp;super(WindowSDL,&nbsp;self).__init__()
+&nbsp;&nbsp;File&nbsp;"C:Usersusth1AppDataLocalProgramsPythonPython36-32libsite-packageskivycorewindow\__init__.py",&nbsp;line&nbsp;899,&nbsp;in&nbsp;__init__
+&nbsp;&nbsp;&nbsp;&nbsp;self.create_window()
+&nbsp;&nbsp;File&nbsp;"C:Usersusth1AppDataLocalProgramsPythonPython36-32libsite-packageskivycorewindowwindow_sdl2.py",&nbsp;line&nbsp;269,&nbsp;in&nbsp;create_window
+&nbsp;&nbsp;&nbsp;&nbsp;self.fullscreen,&nbsp;resizable,&nbsp;state)
+&nbsp;&nbsp;File&nbsp;"kivycorewindow\_window_sdl2.pyx",&nbsp;line&nbsp;110,&nbsp;in&nbsp;kivy.core.window._window_sdl2._WindowSDL2Storage.setup_window&nbsp;(kivycore/window\_window_sdl2.c:2466)
+&nbsp;&nbsp;File&nbsp;"kivygraphicscgl.pyx",&nbsp;line&nbsp;52,&nbsp;in&nbsp;kivy.graphics.cgl.cgl_get_backend_name&nbsp;(kivygraphicscgl.c:3044)
+&nbsp;&nbsp;File&nbsp;"kivygraphicscgl.pyx",&nbsp;line&nbsp;60,&nbsp;in&nbsp;kivy.graphics.cgl.cgl_get_backend_name&nbsp;(kivygraphicscgl.c:2879)
+&nbsp;&nbsp;File&nbsp;"C:Usersusth1AppDataLocalProgramsPythonPython36-32libimportlib\__init__.py",&nbsp;line&nbsp;126,&nbsp;in&nbsp;import_module
+&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;_bootstrap._gcd_import(name[level:],&nbsp;package,&nbsp;level)
+&nbsp;&nbsp;File&nbsp;"&lt;frozen&nbsp;importlib._bootstrap&gt;",&nbsp;line&nbsp;978,&nbsp;in&nbsp;_gcd_import
+&nbsp;&nbsp;File&nbsp;"&lt;frozen&nbsp;importlib._bootstrap&gt;",&nbsp;line&nbsp;961,&nbsp;in&nbsp;_find_and_load
+&nbsp;&nbsp;File&nbsp;"&lt;frozen&nbsp;importlib._bootstrap&gt;",&nbsp;line&nbsp;950,&nbsp;in&nbsp;_find_and_load_unlocked
+&nbsp;&nbsp;File&nbsp;"&lt;frozen&nbsp;importlib._bootstrap&gt;",&nbsp;line&nbsp;648,&nbsp;in&nbsp;_load_unlocked
+&nbsp;&nbsp;File&nbsp;"&lt;frozen&nbsp;importlib._bootstrap&gt;",&nbsp;line&nbsp;560,&nbsp;in&nbsp;module_from_spec
+&nbsp;&nbsp;File&nbsp;"&lt;frozen&nbsp;importlib._bootstrap_external&gt;",&nbsp;line&nbsp;922,&nbsp;in&nbsp;create_module
+&nbsp;&nbsp;File&nbsp;"&lt;frozen&nbsp;importlib._bootstrap&gt;",&nbsp;line&nbsp;205,&nbsp;in&nbsp;_call_with_frames_removed[CRITICAL]&nbsp;[App&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]&nbsp;Unable&nbsp;to&nbsp;get&nbsp;a&nbsp;Window,&nbsp;abort.
+&nbsp;Exception&nbsp;ignored&nbsp;in:&nbsp;"kivy.properties.dpi2px"
+&nbsp;Traceback&nbsp;(most&nbsp;recent&nbsp;call&nbsp;last):
+&nbsp;&nbsp;&nbsp;File&nbsp;"C:Usersusth1AppDataLocalProgramsPythonPython36-32libsite-packageskivyutils.py",&nbsp;line&nbsp;496,&nbsp;in&nbsp;__get__
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;retval&nbsp;=&nbsp;self.func(inst)
+&nbsp;&nbsp;&nbsp;File&nbsp;"C:Usersusth1AppDataLocalProgramsPythonPython36-32libsite-packageskivymetrics.py",&nbsp;line&nbsp;174,&nbsp;in&nbsp;dpi
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EventLoop.ensure_window()
+&nbsp;&nbsp;&nbsp;File&nbsp;"C:Usersusth1AppDataLocalProgramsPythonPython36-32libsite-packageskivyase.py",&nbsp;line&nbsp;127,&nbsp;in&nbsp;ensure_window
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sys.exit(1)
+&nbsp;SystemExit:&nbsp;1[CRITICAL]&nbsp;[App&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]&nbsp;Unable&nbsp;to&nbsp;get&nbsp;a&nbsp;Window,&nbsp;abort.
+
+
+------------------
+(program&nbsp;exited&nbsp;with&nbsp;code:&nbsp;1)
+
+请按任意键继续.&nbsp;.&nbsp;.123456789101112131415161718192021222324252627282930313233343536373839404142434445464748</pre><blockquote style="padding: 16px; margin-top: 0px; margin-bottom: 24px; font-size: 17.5px; border-left-color: rgb(221, 223, 228); color: rgb(51, 51, 51); outline: 0px; background: rgb(238, 240, 244); overflow: auto; word-wrap: normal; word-break: break-all; font-family: -apple-system, &quot;SF UI Text&quot;, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif, SimHei, SimSun;"><p style="margin-top: 0px; color: rgb(153, 153, 153); outline: 0px; text-align: justify; line-height: 22px; word-break: break-all;">还是有错误，接下来在stackoverflow上查询文档:&nbsp;<br style="outline: 0px; word-break: break-all;"><a href="https://stackoverflow.com/questions/40769386/kivy-windows-unable-to-find-any-valuable-window-provider-at-all" rel="nofollow" target="_blank" style="color: rgb(103, 149, 181); transition-property: all; outline: 0px; cursor: pointer; word-break: break-all;">https://stackoverflow.com/questions/40769386/kivy-windows-unable-to-find-any-valuable-window-provider-at-all</a>&nbsp;<br style="outline: 0px; word-break: break-all;">下载python -m pip install docutils pygments pypiwin32 kivy.deps.sdl2 kivy.deps.glew&nbsp;<br style="outline: 0px; word-break: break-all;">运行结果：</p></blockquote><pre name="code" style="overflow-y: hidden; font-family: Consolas, Inconsolata, Courier, monospace; padding: 8px 16px 4px 56px; margin-top: 0px; margin-bottom: 24px; line-height: 22px; background-color: rgb(246, 248, 250); border-width: initial; border-style: none; border-color: initial; outline: 0px; position: relative;">Purge&nbsp;log&nbsp;fired.&nbsp;Analysing...
+Purge&nbsp;finished!
+[INFO&nbsp;&nbsp;&nbsp;]&nbsp;[Logger&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]&nbsp;Record&nbsp;log&nbsp;in&nbsp;C:Usersusth1.kivylogskivy_17-06-09_19.txt
+[INFO&nbsp;&nbsp;&nbsp;]&nbsp;[Kivy&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]&nbsp;v1.10.0[INFO&nbsp;&nbsp;&nbsp;]&nbsp;[Python&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]&nbsp;v3.6.1&nbsp;(v3.6.1:69c0db5,&nbsp;Mar&nbsp;21&nbsp;2017,&nbsp;17:54:52)&nbsp;[MSC&nbsp;v.1900&nbsp;32&nbsp;bit&nbsp;(Intel)]
+[INFO&nbsp;&nbsp;&nbsp;]&nbsp;[Factory&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]&nbsp;194&nbsp;symbols&nbsp;loaded
+[INFO&nbsp;&nbsp;&nbsp;]&nbsp;[Image&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]&nbsp;Providers:&nbsp;img_tex,&nbsp;img_dds,&nbsp;img_sdl2,&nbsp;img_pil,&nbsp;img_gif&nbsp;(img_ffpyplayer&nbsp;ignored)
+[INFO&nbsp;&nbsp;&nbsp;]&nbsp;[Text&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]&nbsp;Provider:&nbsp;sdl2
+[INFO&nbsp;&nbsp;&nbsp;]&nbsp;[OSC&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]&nbsp;using&nbsp;&lt;thread&gt;&nbsp;for&nbsp;socket
+[INFO&nbsp;&nbsp;&nbsp;]&nbsp;[Window&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]&nbsp;Provider:&nbsp;sdl2
+[INFO&nbsp;&nbsp;&nbsp;]&nbsp;[GL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]&nbsp;Using&nbsp;the&nbsp;"OpenGL"&nbsp;graphics&nbsp;system
+[INFO&nbsp;&nbsp;&nbsp;]&nbsp;[GL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]&nbsp;GLEW&nbsp;initialization&nbsp;succeeded
+[INFO&nbsp;&nbsp;&nbsp;]&nbsp;[GL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]&nbsp;Backend&nbsp;used&nbsp;&lt;glew&gt;
+[INFO&nbsp;&nbsp;&nbsp;]&nbsp;[GL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]&nbsp;OpenGL&nbsp;version&nbsp;&lt;b"4.4.0&nbsp;-&nbsp;Build&nbsp;21.20.16.4627"&gt;[INFO&nbsp;&nbsp;&nbsp;]&nbsp;[GL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]&nbsp;OpenGL&nbsp;vendor&nbsp;&lt;b"Intel"&gt;[INFO&nbsp;&nbsp;&nbsp;]&nbsp;[GL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]&nbsp;OpenGL&nbsp;renderer&nbsp;&lt;b"Intel(R)&nbsp;HD&nbsp;Graphics&nbsp;530"&gt;[INFO&nbsp;&nbsp;&nbsp;]&nbsp;[GL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]&nbsp;OpenGL&nbsp;parsed&nbsp;version:&nbsp;4,&nbsp;4[INFO&nbsp;&nbsp;&nbsp;]&nbsp;[GL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]&nbsp;Shading&nbsp;version&nbsp;&lt;b"4.40&nbsp;-&nbsp;Build&nbsp;21.20.16.4627"&gt;[INFO&nbsp;&nbsp;&nbsp;]&nbsp;[GL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]&nbsp;Texture&nbsp;max&nbsp;size&nbsp;&lt;16384&gt;
+[INFO&nbsp;&nbsp;&nbsp;]&nbsp;[GL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]&nbsp;Texture&nbsp;max&nbsp;units&nbsp;&lt;32&gt;
+[INFO&nbsp;&nbsp;&nbsp;]&nbsp;[Shader&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]&nbsp;fragment&nbsp;shader:&nbsp;&lt;b"WARNING:&nbsp;0:7:&nbsp;""&nbsp;:&nbsp;&nbsp;#version&nbsp;directive&nbsp;missing"&gt;
+[INFO&nbsp;&nbsp;&nbsp;]&nbsp;[Shader&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]&nbsp;vertex&nbsp;shader:&nbsp;&lt;b"WARNING:&nbsp;0:7:&nbsp;""&nbsp;:&nbsp;&nbsp;#version&nbsp;directive&nbsp;missing"&gt;
+[INFO&nbsp;&nbsp;&nbsp;]&nbsp;[Window&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]&nbsp;auto&nbsp;add&nbsp;sdl2&nbsp;input&nbsp;provider
+[INFO&nbsp;&nbsp;&nbsp;]&nbsp;[Window&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]&nbsp;virtual&nbsp;keyboard&nbsp;not&nbsp;allowed,&nbsp;single&nbsp;mode,&nbsp;not&nbsp;docked
+[INFO&nbsp;&nbsp;&nbsp;]&nbsp;[Base&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]&nbsp;Start&nbsp;application&nbsp;main&nbsp;loop[INFO&nbsp;&nbsp;&nbsp;]&nbsp;[GL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]&nbsp;NPOT&nbsp;texture&nbsp;support&nbsp;is&nbsp;available123456789101112131415161718192021222324252627</pre><p style="margin-top: 0px; margin-bottom: 16px; color: rgb(79, 79, 79); outline: 0px; line-height: 26px; text-align: justify; word-break: break-all; font-family: -apple-system, &quot;SF UI Text&quot;, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif, SimHei, SimSun; background-color: rgb(255, 255, 255);">成功！</p>                                    <br/>                                    <wb:share-button appkey="4275131013" addition="simple" type="button"                                                     ralateUid="2247236875"></wb:share-button>                                
+
+
+
+
+                            </div>
+                            </div>
+                            <!--相邻文章-->
+                            <div class="fh5co-narrow-content animate-box" data-animate-effect="fadeInLeft"
+                                 style="padding: 4em 0 0 0;">
+                                <h4><a href="#" ></a></h4><h4><a href="#" ></a></h4>                            </div>
+                            <!--相邻文章 end-->
+                            <!--全部评论-->
+                            <div class="fh5co-narrow-content animate-box" data-animate-effect="fadeInLeft"
+                                 id="P_comments"
+                                 style="padding: 1em 0 !important;">
+                                <div class="row">
+                                    <div class="CommentJq">
+                                        <ul v-if="stack" class="list  animate-box linlimeng" data-animate-effect="fadeInLeft">
+
+                                            <li v-for="value in stack" class="animate-box col-xs-12 col-md-12 fadeInLeft animated"
+                                                        data-animate-effect="fadeInLeft"
+                                                        id="P_com_0">
+                                                        <div class="col-md-2 col-xs-2 col-lg-2">
+                                                            <img :src="value.user.head" style="height: 4em;width: 4em;"
+                                                                 class="img-circle"/>
+                                                        </div>
+                                                        <div class="col-md-10 col-xs-10 col-lg-10" style=";position: relative;">
+                                                            <a>[[value.user.name]]</a>
+                                                            <small style="margin-left: 1em">[[value.time]]</small>
+                                                            <p style="margin: 10px auto">[[value.text]]
+</p>
+                                                        </div>
+                                                    </li>
+
+
+                                        </ul>
+                                        <ul v-else class="list  animate-box" data-animate-effect="fadeInLeft">
+
+                                        </ul>
+                                        <div class="more col-xs-8 col-md-10  animate-box " style="display: none;"
+                                             id="ComMore"
+                                             data-animate-effect="fadeInLeft">
+                                            <a href="javascript:void (0);" onClick="CommentJq.loadMore();">加载更多</a>
+                                        </div>
+                                        <div class="comment_box animate-box" data-animate-effect="fadeInLeft"
+                                             id="P_comment_box">
+                                            <h4>Submit your comments</h4>
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                <textarea name="" id="P_message" v-model="commentss" cols="30" rows="7" class="form-control"
+                                                          placeholder="Comment"></textarea>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input type="button" @click='comments'
+                                                               class="btn btn-primary btn-md" value="评论" >
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4" >
+                            <div class="about animate-box"
+                                 style="background:#FFF url(/images/banner4.png) no-repeat top center">
+                                <div class="avatar"><img :src="head"
+                                                         class="img-circle " alt=""></div>
+                                <p class="abname"><span class="about_name">Heanny</span> |
+                                    <span class="about_user">[[name]]</span>
+                                </p>
+                                <p class="abposition">[[profession]]</p>
+                                <div class="abtext"><p style="text-align: center">[[ introduce]]</p>
+                                </div>
+                            </div>
+                            <div class="relevant animate-box">
+                                <div style="margin-left: 1em">
+                                    <h3 class="articles">
+                                        相关文章
+                                    </h3>
+                                    <ul class="articles_title ">
+                                        无                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                                        </div>
+            </div>
+            <!--正文 end-->
+        </aside>
+    </div>
+</div>
+
+<!-- jQuery -->
+<script src="/gg/js/jquery.min.js"></script>
+<script src="/http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
+<!-- jQuery Easing -->
+<script src="/gg/js/jquery.easing.1.3.js"></script>
+<!-- Bootstrap -->
+<script src="/gg/js/bootstrap.min.js"></script>
+<!-- Waypoints -->
+<script src="/gg/js/jquery.waypoints.min.js"></script>
+<!-- Flexslider -->
+<script src="/gg/js/jquery.flexslider-min.js"></script>
+
+<!-- MAIN JS -->
+
+
+<script src="/gg/js/user.js"></script>
+<!--加载动画啊啊啊啊 -->
+<script>
+    function loadMorePc() {
+        $('#P_comments ul li').show();
+        $('#P_comments ul h4').hide();
+    }
+</script>
+<!--加载js-->
+    </div>
+</body>
+</html>
+
+

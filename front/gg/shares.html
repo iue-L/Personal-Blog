@@ -1,0 +1,440 @@
+﻿<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>第1页 | Shares | Heanny Blog | 博客</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="浪子"/>
+    <meta name="keywords"
+          content="浪子"/>
+    <!-- Facebook and Twitter integration -->
+    <meta property="og:title" content=""/>
+    <meta property="og:image" content=""/>
+    <meta property="og:url" content=""/>
+    <meta property="og:site_name" content=""/>
+    <meta property="og:description" content=""/>
+    <meta name="twitter:title" content=""/>
+    <meta name="twitter:image" content=""/>
+    <meta name="twitter:url" content=""/>
+    <meta name="twitter:card" content=""/>
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href="css/dbd89748e69446d99868727a6e2f3945.css" rel="stylesheet">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="/gg/css/animate.css">
+    <!-- Icomoon Icon Fonts-->
+    <link rel="stylesheet" href="/gg/css/icomoon.css">
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" href="/gg/css/bootstrap.css">
+    <!-- Flexslider  -->
+    <link rel="stylesheet" href="/gg/css/flexslider.css">
+    <!-- Theme style  -->
+    <link rel="stylesheet" href="/gg/css/style1.css">
+    <link rel="stylesheet" href="/gg/css/loading.css">
+    <link rel="stylesheet" href="/gg/css/page_style.css">
+    <link rel="stylesheet" href="/gg/css/button_style.css">
+    <!-- Modernizr JS -->
+    <script src="js/modernizr-2.6.2.min.js"></script>
+    <!-- FOR IE9 below -->
+    <!--[if lt IE 9]>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+<div id="fh5co-page">
+    <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
+    <!--导航开始-->
+    <aside id="fh5co-aside" role="complementary" class="border js-fullheight">
+        <h1 id="fh5co-logo"><a href="blogs.html">HEANNY.CN</a></h1>
+        <nav id="fh5co-main-menu" role="navigation">
+            <ul class='app' v-cloak>
+                   <li class="index_li"><a href="/gg/blogs.html">Home</a></li>
+                <li class="blog_li"><a href="/gg/blog.html">
+                        Blog<span class="badge blogNum">170</span>
+                    </a></li>
+
+
+                <li class="gbook_li"><a href="/gg/gbook.html" title="留言">
+                        Gbook<span class="badge gbookNum">[[quantity]]</span>
+                    </a></li>
+
+                <li class="login_li"><a href="/gg/login.html">Sign In</a></li>
+            <li id='user_li'><a href='/gg/user.html' title='用户中心'>[[ name ]]</a></li>
+                <li id ='logo_li'><a href='#' @click="logout" title='注销'>LOGOUT</a> </li></ul>
+        </nav>
+        <div class="fh5co-footer">
+             <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <ul>
+                <li>
+                    <a href="#" target="_blank" id="Twitter" data-toggle="tooltip" data-placement="top" title="Twitter">
+                        <i class="icon-twitter2"></i></a>
+                </li>
+                <li>
+                    <a href="http://weibo.com/hua199501" target="_blank" id="WeiBo" data-toggle="tooltip"
+                       data-placement="top"
+                       title="WeiBo">
+                        <i class="icon-sina-weibo"></i></a>
+                </li>
+                <li>
+                    <a href="#" target="_blank" id="Linkedin" data-toggle="tooltip" data-placement="top"
+                       title="Linkedin">
+                        <i class="icon-linkedin22"></i></a>
+                </li>
+                <li>
+                    <a href="https://github.com/beichenyulu" target="_blank" id="Github" data-toggle="tooltip"
+                       data-placement="top" title="Github">
+                        <i class="icon-github"></i></a>
+                </li>
+            </ul>
+        </div>
+    </aside>
+    <!--导航结束-->
+    <div id="fh5co-main">
+        <!--cours 导航开始-->
+        <div class="row_button animate-box" data-animate-effect="fadeInLeft">
+            <div class="col-md-3 col-sm-3 col-xs-6 animate-box">
+                <a href="#all" class="btn btn-sm animated-button sandy-one" onclick="GetOther('all')">ALL</a>
+            </div>
+            <div class="col-md-3 col-sm-3 col-xs-6 animate-box">
+                <a href="#video" class="btn btn-sm animated-button sandy-two"
+                   onclick="GetOther('video')">Video</a>
+            </div>
+            <div class="col-md-3 col-sm-3 col-xs-6 animate-box">
+                <a href="#file" class="btn btn-sm animated-button sandy-three"
+                   onclick="GetOther('file')">File</a>
+            </div>
+            <div class="col-md-3 col-sm-3 col-xs-6 animate-box">
+                <a href="#software" class="btn btn-sm animated-button sandy-four" onclick="GetOther('software')">Software</a>
+            </div>
+        </div>
+        <!--course 导航结束-->
+
+        <div class="fh5co-narrow-content">
+            <h2 class="fh5co-heading animate-box" data-animate-effect="fadeInLeft">分享
+                <a href="addshare.html" style="float:right;">发布</a>
+            </h2>
+            <div class="row row-bottom-padded-md" data-animate-effect="fadeInLeft" id="body_box">
+                <!--课程开始-->
+                 <div class="col-lg-3 col-md-4 col-sm-6 col-padding animate-box share_box box_"
+                     data-animate-effect="fadeInLeft">
+                    <div class="blog-entry">
+                        <a href="detail-38.html" class="blog-img">
+                            <img src="picture/default3.jpg" class="img-responsive"
+                                 alt="公章专用字体-长宋">
+                        </a>
+                        <div class="desc">
+                            <h3>
+                                <a href="detail-38.html">公章专用字体-长宋</a>
+                            </h3>
+                              <span>
+								<small class="small_1"> admin</small> /
+								<small class="small_2"> 2019-4-3</small>/
+								<small class="small_3">14</small>
+							</span>
+                            <a href="detail-38.html" class="lead">Read More <i class="icon-arrow-right3"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div> <div class="col-lg-3 col-md-4 col-sm-6 col-padding animate-box share_box box_file"
+                     data-animate-effect="fadeInLeft">
+                    <div class="blog-entry">
+                        <a href="detail-36.html" class="blog-img">
+                            <img src="picture/1812311749431546249783603009.png" class="img-responsive"
+                                 alt="计算机科学精粹【试读】">
+                        </a>
+                        <div class="desc">
+                            <h3>
+                                <a href="detail-36.html">计算机科学精粹【试读】</a>
+                            </h3>
+                              <span>
+								<small class="small_1"> admin</small> /
+								<small class="small_2"> 2017-12-12</small>/
+								<small class="small_3">193</small>
+							</span>
+                            <a href="detail-36.html" class="lead">Read More <i class="icon-arrow-right3"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div> <div class="col-lg-3 col-md-4 col-sm-6 col-padding animate-box share_box box_video"
+                     data-animate-effect="fadeInLeft">
+                    <div class="blog-entry">
+                        <a href="detail-35.html" class="blog-img">
+                            <img src="picture/default5.jpg" class="img-responsive"
+                                 alt="Android10大开源框架深度剖析（二）">
+                        </a>
+                        <div class="desc">
+                            <h3>
+                                <a href="detail-35.html">Android10大开源框架深度剖析（二）</a>
+                            </h3>
+                              <span>
+								<small class="small_1"> admin</small> /
+								<small class="small_2"> 2018-12-30</small>/
+								<small class="small_3">112</small>
+							</span>
+                            <a href="detail-35.html" class="lead">Read More <i class="icon-arrow-right3"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div> <div class="col-lg-3 col-md-4 col-sm-6 col-padding animate-box share_box box_video"
+                     data-animate-effect="fadeInLeft">
+                    <div class="blog-entry">
+                        <a href="detail-34.html" class="blog-img">
+                            <img src="picture/default4.jpg" class="img-responsive"
+                                 alt="Android10大开源框架深度剖析（一）">
+                        </a>
+                        <div class="desc">
+                            <h3>
+                                <a href="detail-34.html">Android10大开源框架深度剖析（一）</a>
+                            </h3>
+                              <span>
+								<small class="small_1"> admin</small> /
+								<small class="small_2"> 2018-12-30</small>/
+								<small class="small_3">107</small>
+							</span>
+                            <a href="detail-34.html" class="lead">Read More <i class="icon-arrow-right3"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div> <div class="col-lg-3 col-md-4 col-sm-6 col-padding animate-box share_box box_video"
+                     data-animate-effect="fadeInLeft">
+                    <div class="blog-entry">
+                        <a href="detail-33.html" class="blog-img">
+                            <img src="picture/default1.jpg" class="img-responsive"
+                                 alt="麦子Android基于AndroidStudio开发（三）">
+                        </a>
+                        <div class="desc">
+                            <h3>
+                                <a href="detail-33.html">麦子Android基于AndroidStudio开发（三）</a>
+                            </h3>
+                              <span>
+								<small class="small_1"> admin</small> /
+								<small class="small_2"> 2018-12-30</small>/
+								<small class="small_3">107</small>
+							</span>
+                            <a href="detail-33.html" class="lead">Read More <i class="icon-arrow-right3"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div> <div class="col-lg-3 col-md-4 col-sm-6 col-padding animate-box share_box box_video"
+                     data-animate-effect="fadeInLeft">
+                    <div class="blog-entry">
+                        <a href="detail-32.html" class="blog-img">
+                            <img src="picture/default3.jpg" class="img-responsive"
+                                 alt="麦子Android基于AndroidStudio开发（二）">
+                        </a>
+                        <div class="desc">
+                            <h3>
+                                <a href="detail-32.html">麦子Android基于AndroidStudio开发（二）</a>
+                            </h3>
+                              <span>
+								<small class="small_1"> admin</small> /
+								<small class="small_2"> 2018-12-30</small>/
+								<small class="small_3">108</small>
+							</span>
+                            <a href="detail-32.html" class="lead">Read More <i class="icon-arrow-right3"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div> <div class="col-lg-3 col-md-4 col-sm-6 col-padding animate-box share_box box_video"
+                     data-animate-effect="fadeInLeft">
+                    <div class="blog-entry">
+                        <a href="detail-31.html" class="blog-img">
+                            <img src="picture/default6.jpg" class="img-responsive"
+                                 alt="麦子Android基于AndroidStudio开发（二）">
+                        </a>
+                        <div class="desc">
+                            <h3>
+                                <a href="detail-31.html">麦子Android基于AndroidStudio开发（二）</a>
+                            </h3>
+                              <span>
+								<small class="small_1"> admin</small> /
+								<small class="small_2"> 2018-12-30</small>/
+								<small class="small_3">103</small>
+							</span>
+                            <a href="detail-31.html" class="lead">Read More <i class="icon-arrow-right3"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div> <div class="col-lg-3 col-md-4 col-sm-6 col-padding animate-box share_box box_video"
+                     data-animate-effect="fadeInLeft">
+                    <div class="blog-entry">
+                        <a href="detail-30.html" class="blog-img">
+                            <img src="picture/default2.jpg" class="img-responsive"
+                                 alt="麦子Android基于AndroidStudio开发（一）">
+                        </a>
+                        <div class="desc">
+                            <h3>
+                                <a href="detail-30.html">麦子Android基于AndroidStudio开发（一）</a>
+                            </h3>
+                              <span>
+								<small class="small_1"> admin</small> /
+								<small class="small_2"> 2018-12-30</small>/
+								<small class="small_3">105</small>
+							</span>
+                            <a href="detail-30.html" class="lead">Read More <i class="icon-arrow-right3"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div> <div class="col-lg-3 col-md-4 col-sm-6 col-padding animate-box share_box box_video"
+                     data-animate-effect="fadeInLeft">
+                    <div class="blog-entry">
+                        <a href="detail-29.html" class="blog-img">
+                            <img src="picture/default7.jpg" class="img-responsive"
+                                 alt="FFmpeg音视频核心技术精讲（二）">
+                        </a>
+                        <div class="desc">
+                            <h3>
+                                <a href="detail-29.html">FFmpeg音视频核心技术精讲（二）</a>
+                            </h3>
+                              <span>
+								<small class="small_1"> admin</small> /
+								<small class="small_2"> 2018-12-30</small>/
+								<small class="small_3">102</small>
+							</span>
+                            <a href="detail-29.html" class="lead">Read More <i class="icon-arrow-right3"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div> <div class="col-lg-3 col-md-4 col-sm-6 col-padding animate-box share_box box_video"
+                     data-animate-effect="fadeInLeft">
+                    <div class="blog-entry">
+                        <a href="detail-28.html" class="blog-img">
+                            <img src="picture/default5.jpg" class="img-responsive"
+                                 alt="FFmpeg音视频核心技术精讲（一）">
+                        </a>
+                        <div class="desc">
+                            <h3>
+                                <a href="detail-28.html">FFmpeg音视频核心技术精讲（一）</a>
+                            </h3>
+                              <span>
+								<small class="small_1"> admin</small> /
+								<small class="small_2"> 2018-12-30</small>/
+								<small class="small_3">107</small>
+							</span>
+                            <a href="detail-28.html" class="lead">Read More <i class="icon-arrow-right3"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div> <div class="col-lg-3 col-md-4 col-sm-6 col-padding animate-box share_box box_software"
+                     data-animate-effect="fadeInLeft">
+                    <div class="blog-entry">
+                        <a href="detail-27.html" class="blog-img">
+                            <img src="picture/1812311837121546252632936773.jpg" class="img-responsive"
+                                 alt="vc++安装器">
+                        </a>
+                        <div class="desc">
+                            <h3>
+                                <a href="detail-27.html">vc++安装器</a>
+                            </h3>
+                              <span>
+								<small class="small_1"> admin</small> /
+								<small class="small_2"> 2018-12-29</small>/
+								<small class="small_3">107</small>
+							</span>
+                            <a href="detail-27.html" class="lead">Read More <i class="icon-arrow-right3"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div> <div class="col-lg-3 col-md-4 col-sm-6 col-padding animate-box share_box box_file"
+                     data-animate-effect="fadeInLeft">
+                    <div class="blog-entry">
+                        <a href="detail-25.html" class="blog-img">
+                            <img src="picture/1812311839511546252791285009.png" class="img-responsive"
+                                 alt="【adobe】ai cc2019破解文件">
+                        </a>
+                        <div class="desc">
+                            <h3>
+                                <a href="detail-25.html">【adobe】ai cc2019破解文件</a>
+                            </h3>
+                              <span>
+								<small class="small_1"> admin</small> /
+								<small class="small_2"> 2018-11-01</small>/
+								<small class="small_3">154</small>
+							</span>
+                            <a href="detail-25.html" class="lead">Read More <i class="icon-arrow-right3"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>                <div class="col-lg-3 col-md-4 col-sm-6 hidden col-padding animate-box share_box box_file"
+                     data-animate-effect="fadeInLeft">
+                    <div class="blog-entry">
+                        <a href="#" class="blog-img">
+                            <img src="picture/img-3.jpg" class="img-responsive"
+                                 alt="图片数据丢失，请联系管理员">
+                        </a>
+                        <div class="desc">
+                            <h3>
+                                <a href="#">1234</a>
+                            </h3>
+                            <a href="#" class="lead">Read More <i class="icon-arrow-right3"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!--课程结束-->
+            </div>
+            <div class="page_box animate-box" data-animate-effect="fadeInLeft"
+                 style="padding: 1em 0 3em 0;margin-bottom: 20px">
+                <div class="jogger" id="page_box">
+                    <span class="current">首页</span><span class="current">上一页</span><span class="current">1</span><a href="shares-2.html" >2</a><a href="shares-2.html" >下一页</a><a href="shares-3.html" >尾页</a>                </div>
+            </div>
+            <!--数据丢失-->
+            <div id="errordiv" class="page_box animate-box" data-animate-effect="fadeInLeft"
+                 style="display: none;text-align: center">
+                <img src="picture/error2.gif" class="page_box animate-box" style="margin: 0 auto">
+                <br/>
+                <p style="text-align: center;font-size: 2em" class="page_box animate-box">
+                    程序猿睡觉把数据搞丢啦……
+                </p>
+            </div>
+            <!--数据丢失end-->
+            <!--动画“class= "animate-box"” 方向“data-animate-effect="fadeInLeft  fadeInRight "”-->
+        </div>
+    </div>
+</div>
+<!-- jQuery -->
+<script src="/gg/js/jquery.min.js"></script>
+<!-- jQuery Easing -->
+<script src="/gg/js/jquery.easing.1.3.js"></script>
+<!-- Bootstrap -->
+<script src="/gg/js/bootstrap.min.js"></script>
+<!-- Waypoints -->
+<script src="/gg/js/jquery.waypoints.min.js"></script>
+<!-- Flexslider -->
+<script src="/gg/js/jquery.flexslider-min.js"></script>
+<!-- MAIN JS -->
+<script src="js/host.js"></script>
+<script src="js/vue-2.5.16.js"></script>
+<script src="js/axios-0.18.0.min.js"></script>
+<script src="js/user.js"></script>
+<script>
+    var GetOther = function (ccl) {
+        if (ccl === 'all') {
+            $('#body_box .share_box').show();
+        } else {
+            $('#body_box .share_box').hide();
+            $('.CourJq .more').html(' <a href="javascript:;" class="btn btn-primary btn-md" onClick="LoadMore();">加载更多</a>');
+            $('#body_box .box_' + ccl).show();
+        }
+    };
+    $('.share_li').addClass('fh5co-active');
+</script>
+</body>
+</html>
+
+

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html xmlns:wb="http://open.weibo.com/wb">
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta name="referrer" content="no-referrer"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title> HeannyBlog | 个人博客</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="浪子"/>
+    <meta name="keywords"
+          content="浪子"/>
+    <!-- Facebook and Twitter integration -->
+    <meta property="og:title" content=""/>
+    <meta property="og:image" content=""/>
+    <meta property="og:url" content=""/>
+    <meta property="og:site_name" content=""/>
+    <meta property="og:description" content=""/>
+    <meta name="twitter:title" content=""/>
+    <meta name="twitter:image" content=""/>
+    <meta name="twitter:url" content=""/>
+    <meta name="twitter:card" content=""/>
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="/gg/css/animate.css">
+    <!-- Icomoon Icon Fonts-->
+    <link rel="stylesheet" href="/gg/css/icomoon.css">
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" href="/gg/css/bootstrap.css">
+    <!-- Flexslider  -->
+    <link rel="stylesheet" href="/gg/css/flexslider.css">
+    <!-- Theme style  -->
+    <link rel="stylesheet" href="/gg/css/style.css">
+    <link rel="stylesheet" href="/gg/css/blog.css">
+    <link rel="stylesheet" href="/gg/css/loading.css">
+    <link rel="stylesheet" href="/gg/css/page_style.css">
+    <!-- Modernizr JS -->
+    <script src="/gg/js/host.js"></script>
+    <script src="/gg/js/vue-2.5.16.js"></script>
+    <script src="/gg/js/axios-0.18.0.min.js"></script>
+    <script src="/gg/js/modernizr-2.6.2.min.js"></script>
+    <script>
+        var t={
+       getQueryString:function(name){
+          var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+          var r = window.location.search.substr(1).match(reg);
+          if(r!=null)
+            return  decodeURI(r[2]);
+            return null;
+       }
+   }
+
+        var cityId=t.getQueryString("id");//城市id
+        var user_id = sessionStorage.user_id || localStorage.user_id;
+        var token = sessionStorage.token || localStorage.token;
+        if (!(user_id && token)) {
+            location.href = '/gg/login.html?next=/gg/past/'+cityId+'.html?id='+cityId;
+        }
+    </script>
+    <!-- FOR IE9 below -->
+    <!--[if lt IE 9]>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div id="fh5co-page" >
+    <div class="app" v-cloak>
+    <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
+    <aside id="fh5co-aside" role="complementary" class="border js-fullheight">
+        <h1 id="fh5co-logo"><a href="/gg/blogs.html">HEANNY.CN</a></h1>
+        <nav id="fh5co-main-menu" role="navigation">
+            <ul >
+                   <li class="index_li"><a href="/gg/blogs.html">Home</a></li>
+                <li class="blog_li"><a href="/gg/blog.html">
+                        Blog<span class="badge blogNum">[[counts]]</span>
+                    </a></li>
+
+
+                <li class="gbook_li"><a href="/gg/gbook.html" title="留言">
+                        Gbook<span class="badge gbookNum">[[quantity]]</span>
+                    </a></li>
+
+                <li class="login_li"><a href="/gg/login.html">Sign In</a></li>
+              <li id='user_li'><a href='/gg/user.html' title='用户中心'>[[ name ]]</a></li>
+                <li id ='logo_li'><a href='#' @click="logout" title='注销'>LOGOUT</a> </li></ul></ul>
+        </nav>
+        <div class="fh5co-footer">
+
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <ul>
+                <li>
+                    <a href="#" target="_blank" id="Twitter" data-toggle="tooltip" data-placement="top" title="Twitter">
+                        <i class="icon-twitter2"></i></a>
+                </li>
+                <li>
+                    <a href="http://weibo.com/hua199501" target="_blank" id="WeiBo" data-toggle="tooltip"
+                       data-placement="top"
+                       title="WeiBo">
+                        <i class="icon-sina-weibo"></i></a>
+                </li>
+                <li>
+                    <a href="#" target="_blank" id="Linkedin" data-toggle="tooltip" data-placement="top"
+                       title="Linkedin">
+                        <i class="icon-linkedin22"></i></a>
+                </li>
+                <li>
+                    <a href="https://github.com/beichenyulu" target="_blank" id="Github" data-toggle="tooltip"
+                       data-placement="top" title="Github">
+                        <i class="icon-github"></i></a>
+                </li>
+            </ul>
+        </div>
+
+    </aside>
+
+    <div id="fh5co-main">
+        <aside id="fh5co-hero">
+            <!--正文-->
+            <div class=" col-padding animate-box fadeInLeft animated post_body" id="P_note_box">
+                <div class="row">
+                                            <div class="col-md-8">
+                            <div class="blog_title">
+                                <h1 class="fh5co-heading-colored animate-box" style="    padding-top: 10px;">
+                                                                        【2018-10-03】pycharm,webstorm,phpstorm 破解激活 <a class="blog_collect" href="javascript:collect(-1)"><img src="/images/collect.png" alt=""></a>                                </h1>
+                                <div class="animate-box fadeInLeft"
+                                     style="    padding-left: 20px;    padding-top: 10px;">
+                                    <span class="dtime" style="padding-left: 15px ">2019-04-11</span>
+                                    <span class="viewnum" style="padding-left: 15px ;margin-left: 30px;">
+									18610							</span>
+                                </div>
+                                <div class="cloud ">
+                                    <ul style="padding-top: 0 !important;">
+                                        <a href="javascropt:void(0);" class="animate-box">pycharm</a><a href="javascropt:void(0);" class="animate-box">破解</a>                                    </ul>
+                                </div>
+
+                            </div>
+                            <!--<div class='top_50'></div>-->
+                            <div class="col-md-12 col-xs-12 NoteBox" style="background-color: white">
+                                <div class="NoteBody animate-box">
+                                    <!--?= stripslashes($dataarr->content) ?-->
+
+                                                                       <!--?= stripslashes($dataarr->content) ?-->                                    <h2 style="font-family: &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, SimHei, Arial, SimSun; line-height: 32px; color: rgb(79, 79, 79); margin-top: 1.3em; margin-bottom: 1em; font-size: 1.4em; border-bottom: 1px solid rgb(238, 238, 238); background-color: rgb(255, 255, 255); outline: 0px; word-break: break-all;">破解补丁激活</h2><blockquote><p style="margin-top: 0.5em; margin-bottom: 0.5em; color: rgb(79, 79, 79); outline: 0px; text-align: justify; line-height: 26px; word-break: break-all;">优点：到期时间为2099年，基本为永久啦</p><p style="margin-top: 0.5em; margin-bottom: 0.5em; color: rgb(79, 79, 79); outline: 0px; text-align: justify; line-height: 26px; word-break: break-all;">缺点：相对服务器激活麻烦些，但是一共只需要3个步骤，其实并不麻烦</p></blockquote><p style="margin-top: 15px; margin-bottom: 15px; color: rgb(85, 85, 85);"><strong><span style="color: rgb(51, 51, 51); font-family: -apple-system, &quot;SF UI Text&quot;, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif, SimHei, SimSun;">修改hosts文件</span></strong></p><p style="margin-top: 15px; margin-bottom: 15px; color: rgb(85, 85, 85);"><span style="outline: 0px; word-break: break-all; color: rgb(51, 51, 51); font-family: &quot;Microsoft Yahei&quot;, 微软雅黑, arial, 宋体, sans-serif;">将</span><span style="outline: 0px; word-break: break-all; color: rgb(51, 51, 51); font-family: &quot;Microsoft Yahei&quot;, 微软雅黑, arial, 宋体, sans-serif;"><span style="outline: 0px; word-break: break-all; color: rgb(255, 0, 0);">0.0.0.0 account.jetbrains.com</span></span><span style="outline: 0px; word-break: break-all; color: rgb(51, 51, 51); font-family: &quot;Microsoft Yahei&quot;, 微软雅黑, arial, 宋体, sans-serif;">添加到hosts文件最后，注意hosts文件无后缀，如果遇到无法修改或权限问题，可以采用覆盖的方法去替换hosts文件<br/></span><br/></p><p style="margin-top: 0.5em; margin-bottom: 0.5em; color: rgb(79, 79, 79); outline: 0px; font-size: 16px; line-height: 26px; text-align: justify; word-break: break-all;">下载&nbsp;<a href="http://idea.lanyus.com/jar/JetbrainsCrack-2.8-release-enc.jar" target="_blank" style="color: rgb(103, 149, 181); transition-property: all; outline: 0px; cursor: pointer; word-break: break-all;"></a>&nbsp;</p><p><a href="http://idea.lanyus.com/jar/JetbrainsCrack-3.1-release-enc.jar" target="_self" title="http://idea.lanyus.com/jar/JetbrainsCrack-3.1-release-enc.jar">&nbsp;http://idea.lanyus.com/jar/JetbrainsCrack-3.1-release-enc.jar&nbsp;</a>/</p><p><a href="http://download.heanny.cn/download/JetbrainsCrack-3.1-release-enc.jar" target="_blank" title="http://download.heanny.cn/download/JetbrainsCrack-3.1-release-enc.jar">http://download.heanny.cn/download/JetbrainsCrack-3.1-release-enc.jar</a><br/></p><p><br/></p><p><span style="text-decoration: underline;"><em>更多版本前往http://</em></span><a href="http://www.heanny.cn/file.html" _src="http://www.heanny.cn/file.html" style="text-decoration: underline;"><em>www.heanny.cn/file.html</em></a><span style="text-decoration: underline;"><em>&nbsp; <span style="text-decoration: underline; color: rgb(192, 80, 77);">idea文件夹<span style="text-decoration: underline; color: rgb(0, 0, 0);">查找</span></span></em></span></p><p style="margin-top: 0.5em; margin-bottom: 0.5em; color: rgb(79, 79, 79); outline: 0px; font-size: 16px; line-height: 26px; text-align: justify; word-break: break-all;">并将 JetbrainsCrack-3.1-release-enc.jar 放置到 D盘根目录(或其他位置)。<br/></p><p style="margin-top: 0.5em; margin-bottom: 0.5em; color: rgb(79, 79, 79); outline: 0px; font-size: 16px; line-height: 26px; text-align: justify; word-break: break-all;">在 Pycharm安装目录的bin目录下找到&nbsp;<code style="font-family: Consolas, Inconsolata, Courier, monospace; font-size: 0.85em; padding: 0px 0.3em; background-color: rgb(248, 248, 248); border-radius: 4px; outline: 0px; word-break: break-all; line-height: 22px; margin-right: 0.15em; margin-left: 0.15em; white-space: pre-wrap; border: 1px solid rgb(234, 234, 234);"><span style="color: rgb(255, 0, 0);">pycharm.exe.vmoptions</span></code>&nbsp;和&nbsp;<code style="font-family: Consolas, Inconsolata, Courier, monospace; font-size: 0.85em; padding: 0px 0.3em; background-color: rgb(248, 248, 248); border-radius: 4px; outline: 0px; word-break: break-all; line-height: 22px; margin-right: 0.15em; margin-left: 0.15em; white-space: pre-wrap; border: 1px solid rgb(234, 234, 234);"><span style="color: rgb(255, 0, 0);">pycharm64.exe.vmoptions</span></code>&nbsp;，以文本格式打开并同时在两个文件最后追加&nbsp;</p><ol class=" list-paddingleft-2" style="list-style-type: none;"><li><pre class="brush:c#;toolbar:false">&nbsp;-javaagent:D:\Program&nbsp;Files\JetBrains\JetbrainsCrack-3.1-release-enc.jar</pre></li></ol><p><span style="color: rgb(79, 79, 79); text-align: justify;">然后保存。</span><br/></p><p style="margin-top: 0.5em; margin-bottom: 0.5em; color: rgb(79, 79, 79); outline: 0px; font-size: 16px; line-height: 26px; text-align: justify; word-break: break-all;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;启动 IntelliJ IDEA ,选择激活码激活，输入如下内容激活<br/></p><pre style="font-family: Consolas, Inconsolata, Courier, monospace; font-size: 1em; margin-top: 1.2em; margin-bottom: 1.2em; line-height: 1.2em; color: rgb(0, 0, 0); background-color: rgb(240, 240, 240); outline: 0px;">ThisCrackLicenseId-{&quot;licenseId&quot;:&quot;11011&quot;,&quot;licenseeName&quot;:&quot;heanny&quot;,&quot;assigneeName&quot;:&quot;肖奈&quot;,&quot;assigneeEmail&quot;:&quot;lzh@heanny.cn&quot;,&quot;licenseRestriction&quot;:&quot;&quot;,&quot;checkConcurrentUse&quot;:false,&quot;products&quot;:[
+{&quot;code&quot;:&quot;II&quot;,&quot;paidUpTo&quot;:&quot;2099-12-31&quot;},
+{&quot;code&quot;:&quot;DM&quot;,&quot;paidUpTo&quot;:&quot;2099-12-31&quot;},
+{&quot;code&quot;:&quot;AC&quot;,&quot;paidUpTo&quot;:&quot;2099-12-31&quot;},
+{&quot;code&quot;:&quot;RS0&quot;,&quot;paidUpTo&quot;:&quot;2099-12-31&quot;},
+{&quot;code&quot;:&quot;WS&quot;,&quot;paidUpTo&quot;:&quot;2099-12-31&quot;},
+{&quot;code&quot;:&quot;DPN&quot;,&quot;paidUpTo&quot;:&quot;2099-12-31&quot;},
+{&quot;code&quot;:&quot;RC&quot;,&quot;paidUpTo&quot;:&quot;2099-12-31&quot;},
+{&quot;code&quot;:&quot;PS&quot;,&quot;paidUpTo&quot;:&quot;2099-12-31&quot;},
+{&quot;code&quot;:&quot;DC&quot;,&quot;paidUpTo&quot;:&quot;2099-12-31&quot;},
+{&quot;code&quot;:&quot;RM&quot;,&quot;paidUpTo&quot;:&quot;2099-12-31&quot;},
+{&quot;code&quot;:&quot;CL&quot;,&quot;paidUpTo&quot;:&quot;2099-12-31&quot;},
+{&quot;code&quot;:&quot;PC&quot;,&quot;paidUpTo&quot;:&quot;2099-12-31&quot;}
+],&quot;hash&quot;:&quot;2911276/0&quot;,&quot;gracePeriodDays&quot;:7,&quot;autoProlongated&quot;:false}</pre><p><br/></p><p><em><strong><span style="font-size: 20px;">方法2.修改host文件后，直接打开ide，输入</span></strong></em></p><pre class="brush:html;toolbar:false">EB101IWSWD-eyJsaWNlbnNlSWQiOiJFQjEwMUlXU1dEIiwibGljZW5zZWVOYW1lIjoibGFuIHl1IiwiYXNzaWduZWVOYW1lIjoiIiwiYXNzaWduZWVFbWFpbCI6IiIsImxpY2Vuc2VSZXN0cmljdGlvbiI6IkZvciBlZHVjYXRpb25hbCB1c2Ugb25seSIsImNoZWNrQ29uY3VycmVudFVzZSI6ZmFsc2UsInByb2R1Y3RzIjpbeyJjb2RlIjoiSUkiLCJwYWlkVXBUbyI6IjIwMTgtMTAtMTQifSx7ImNvZGUiOiJSUzAiLCJwYWlkVXBUbyI6IjIwMTgtMTAtMTQifSx7ImNvZGUiOiJXUyIsInBhaWRVcFRvIjoiMjAxOC0xMC0xNCJ9LHsiY29kZSI6IlJEIiwicGFpZFVwVG8iOiIyMDE4LTEwLTE0In0seyJjb2RlIjoiUkMiLCJwYWlkVXBUbyI6IjIwMTgtMTAtMTQifSx7ImNvZGUiOiJEQyIsInBhaWRVcFRvIjoiMjAxOC0xMC0xNCJ9LHsiY29kZSI6IkRCIiwicGFpZFVwVG8iOiIyMDE4LTEwLTE0In0seyJjb2RlIjoiUk0iLCJwYWlkVXBUbyI6IjIwMTgtMTAtMTQifSx7ImNvZGUiOiJETSIsInBhaWRVcFRvIjoiMjAxOC0xMC0xNCJ9LHsiY29kZSI6IkFDIiwicGFpZFVwVG8iOiIyMDE4LTEwLTE0In0seyJjb2RlIjoiRFBOIiwicGFpZFVwVG8iOiIyMDE4LTEwLTE0In0seyJjb2RlIjoiUFMiLCJwYWlkVXBUbyI6IjIwMTgtMTAtMTQifSx7ImNvZGUiOiJDTCIsInBhaWRVcFRvIjoiMjAxOC0xMC0xNCJ9LHsiY29kZSI6IlBDIiwicGFpZFVwVG8iOiIyMDE4LTEwLTE0In0seyJjb2RlIjoiUlNVIiwicGFpZFVwVG8iOiIyMDE4LTEwLTE0In1dLCJoYXNoIjoiNjk0NDAzMi8wIiwiZ3JhY2VQZXJpb2REYXlzIjowLCJhdXRvUHJvbG9uZ2F0ZWQiOmZhbHNlLCJpc0F1dG9Qcm9sb25nYXRlZCI6ZmFsc2V9-Gbb7jeR8JWOVxdUFaXfJzVU/O7c7xHQyaidCnhYLp7v32zdeXiHUU7vlrrm5y9ZX0lmQk3plCCsW+phrC9gGAPd6WDKhkal10qVNg0larCR2tQ3u8jfv1t2JAvWrMOJfFG9kKsJuw1P4TozZ/E7Qvj1cupf/rldhoOmaXMyABxNN1af1RV3bVhe4FFZe0p7xlIJF/ctZkFK62HYmh8V3AyhUNTzrvK2k+t/tlDJz2LnW7nYttBLHld8LabPlEEjpTHswhzlthzhVqALIgvF0uNbIJ5Uwpb7NqR4U/2ob0Z+FIcRpFUIAHEAw+RLGwkCge5DyZKfx+RoRJ/In4q/UpA==-MIIEPjCCAiagAwIBAgIBBTANBgkqhkiG9w0BAQsFADAYMRYwFAYDVQQDDA1KZXRQcm9maWxlIENBMB4XDTE1MTEwMjA4MjE0OFoXDTE4MTEwMTA4MjE0OFowETEPMA0GA1UEAwwGcHJvZDN5MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAxcQkq+zdxlR2mmRYBPzGbUNdMN6OaXiXzxIWtMEkrJMO/5oUfQJbLLuMSMK0QHFmaI37WShyxZcfRCidwXjot4zmNBKnlyHodDij/78TmVqFl8nOeD5+07B8VEaIu7c3E1N+e1doC6wht4I4+IEmtsPAdoaj5WCQVQbrI8KeT8M9VcBIWX7fD0fhexfg3ZRt0xqwMcXGNp3DdJHiO0rCdU+Itv7EmtnSVq9jBG1usMSFvMowR25mju2JcPFp1+I4ZI+FqgR8gyG8oiNDyNEoAbsR3lOpI7grUYSvkB/xVy/VoklPCK2h0f0GJxFjnye8NT1PAywoyl7RmiAVRE/EKwIDAQABo4GZMIGWMAkGA1UdEwQCMAAwHQYDVR0OBBYEFGEpG9oZGcfLMGNBkY7SgHiMGgTcMEgGA1UdIwRBMD+AFKOetkhnQhI2Qb1t4Lm0oFKLl/GzoRykGjAYMRYwFAYDVQQDDA1KZXRQcm9maWxlIENBggkA0myxg7KDeeEwEwYDVR0lBAwwCgYIKwYBBQUHAwEwCwYDVR0PBAQDAgWgMA0GCSqGSIb3DQEBCwUAA4ICAQC9WZuYgQedSuOc5TOUSrRigMw4/+wuC5EtZBfvdl4HT/8vzMW/oUlIP4YCvA0XKyBaCJ2iX+ZCDKoPfiYXiaSiH+HxAPV6J79vvouxKrWg2XV6ShFtPLP+0gPdGq3x9R3+kJbmAm8w+FOdlWqAfJrLvpzMGNeDU14YGXiZ9bVzmIQbwrBA+c/F4tlK/DV07dsNExihqFoibnqDiVNTGombaU2dDup2gwKdL81ua8EIcGNExHe82kjF4zwfadHk3bQVvbfdAwxcDy4xBjs3L4raPLU3yenSzr/OEur1+jfOxnQSmEcMXKXgrAQ9U55gwjcOFKrgOxEdek/Sk1VfOjvS+nuM4eyEruFMfaZHzoQiuw4IqgGc45ohFH0UUyjYcuFxxDSU9lMCv8qdHKm+wnPRb0l9l5vXsCBDuhAGYD6ss+Ga+aDY6f/qXZuUCEUOH3QUNbbCUlviSz6+GiRnt1kA9N2Qachl+2yBfaqUqr8h7Z2gsx5LcIf5kYNsqJ0GavXTVyWh7PYiKX4bs354ZQLUwwa/cG++2+wNWP+HtBhVxMRNTdVhSm38AknZlD+PTAsWGu9GyLmhti2EnVwGybSD2Dxmhxk3IPCkhKAK+pl0eWYGZWG3tJ9mZ7SowcXLWDFAk0lRJnKGFMTggrWjV8GYpw5bq23VmIqqDLgkNzuoog==</pre><p>友情链接：http://idea.lanyus.com</p>                                    <br/>                                    <wb:share-button appkey="4275131013" addition="simple" type="button"                                                     ralateUid="2247236875"></wb:share-button>                                
+
+
+
+
+                            </div>
+                            </div>
+                            <!--相邻文章-->
+                            <div class="fh5co-narrow-content animate-box" data-animate-effect="fadeInLeft"
+                                 style="padding: 4em 0 0 0;">
+                                <h4><a href="#" ></a></h4><h4><a href="#" ></a></h4>                            </div>
+                            <!--相邻文章 end-->
+                            <!--全部评论-->
+                            <div class="fh5co-narrow-content animate-box" data-animate-effect="fadeInLeft"
+                                 id="P_comments"
+                                 style="padding: 1em 0 !important;">
+                                <div class="row">
+                                    <div class="CommentJq">
+                                        <ul v-if="stack" class="list  animate-box linlimeng" data-animate-effect="fadeInLeft">
+
+                                            <li v-for="value in stack" class="animate-box col-xs-12 col-md-12 fadeInLeft animated"
+                                                        data-animate-effect="fadeInLeft"
+                                                        id="P_com_0">
+                                                        <div class="col-md-2 col-xs-2 col-lg-2">
+                                                            <img :src="value.user.head" style="height: 4em;width: 4em;"
+                                                                 class="img-circle"/>
+                                                        </div>
+                                                        <div class="col-md-10 col-xs-10 col-lg-10" style=";position: relative;">
+                                                            <a>[[value.user.name]]</a>
+                                                            <small style="margin-left: 1em">[[value.time]]</small>
+                                                            <p style="margin: 10px auto">[[value.text]]
+</p>
+                                                        </div>
+                                                    </li>
+
+
+                                        </ul>
+                                        <ul v-else class="list  animate-box" data-animate-effect="fadeInLeft">
+
+                                        </ul>
+                                        <div class="more col-xs-8 col-md-10  animate-box " style="display: none;"
+                                             id="ComMore"
+                                             data-animate-effect="fadeInLeft">
+                                            <a href="javascript:void (0);" onClick="CommentJq.loadMore();">加载更多</a>
+                                        </div>
+                                        <div class="comment_box animate-box" data-animate-effect="fadeInLeft"
+                                             id="P_comment_box">
+                                            <h4>Submit your comments</h4>
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                <textarea name="" id="P_message" v-model="commentss" cols="30" rows="7" class="form-control"
+                                                          placeholder="Comment"></textarea>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input type="button" @click='comments'
+                                                               class="btn btn-primary btn-md" value="评论" >
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4" >
+                            <div class="about animate-box"
+                                 style="background:#FFF url(/images/banner4.png) no-repeat top center">
+                                <div class="avatar"><img :src="head"
+                                                         class="img-circle " alt=""></div>
+                                <p class="abname"><span class="about_name">Heanny</span> |
+                                    <span class="about_user">[[name]]</span>
+                                </p>
+                                <p class="abposition">[[profession]]</p>
+                                <div class="abtext"><p style="text-align: center">[[ introduce]]</p>
+                                </div>
+                            </div>
+                            <div class="relevant animate-box">
+                                <div style="margin-left: 1em">
+                                    <h3 class="articles">
+                                        相关文章
+                                    </h3>
+                                    <ul class="articles_title ">
+                                        无                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                                        </div>
+            </div>
+            <!--正文 end-->
+        </aside>
+    </div>
+</div>
+
+<!-- jQuery -->
+<script src="/gg/js/jquery.min.js"></script>
+<script src="/http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
+<!-- jQuery Easing -->
+<script src="/gg/js/jquery.easing.1.3.js"></script>
+<!-- Bootstrap -->
+<script src="/gg/js/bootstrap.min.js"></script>
+<!-- Waypoints -->
+<script src="/gg/js/jquery.waypoints.min.js"></script>
+<!-- Flexslider -->
+<script src="/gg/js/jquery.flexslider-min.js"></script>
+
+<!-- MAIN JS -->
+
+
+<script src="/gg/js/user.js"></script>
+<!--加载动画啊啊啊啊 -->
+<script>
+    function loadMorePc() {
+        $('#P_comments ul li').show();
+        $('#P_comments ul h4').hide();
+    }
+</script>
+<!--加载js-->
+    </div>
+</body>
+</html>
+
+

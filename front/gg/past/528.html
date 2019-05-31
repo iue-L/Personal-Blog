@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html xmlns:wb="http://open.weibo.com/wb">
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta name="referrer" content="no-referrer"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title> HeannyBlog | 个人博客</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="浪子"/>
+    <meta name="keywords"
+          content="浪子"/>
+    <!-- Facebook and Twitter integration -->
+    <meta property="og:title" content=""/>
+    <meta property="og:image" content=""/>
+    <meta property="og:url" content=""/>
+    <meta property="og:site_name" content=""/>
+    <meta property="og:description" content=""/>
+    <meta name="twitter:title" content=""/>
+    <meta name="twitter:image" content=""/>
+    <meta name="twitter:url" content=""/>
+    <meta name="twitter:card" content=""/>
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="/gg/css/animate.css">
+    <!-- Icomoon Icon Fonts-->
+    <link rel="stylesheet" href="/gg/css/icomoon.css">
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" href="/gg/css/bootstrap.css">
+    <!-- Flexslider  -->
+    <link rel="stylesheet" href="/gg/css/flexslider.css">
+    <!-- Theme style  -->
+    <link rel="stylesheet" href="/gg/css/style.css">
+    <link rel="stylesheet" href="/gg/css/blog.css">
+    <link rel="stylesheet" href="/gg/css/loading.css">
+    <link rel="stylesheet" href="/gg/css/page_style.css">
+    <!-- Modernizr JS -->
+    <script src="/gg/js/host.js"></script>
+    <script src="/gg/js/vue-2.5.16.js"></script>
+    <script src="/gg/js/axios-0.18.0.min.js"></script>
+    <script src="/gg/js/modernizr-2.6.2.min.js"></script>
+    <script>
+        var t={
+       getQueryString:function(name){
+          var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+          var r = window.location.search.substr(1).match(reg);
+          if(r!=null)
+            return  decodeURI(r[2]);
+            return null;
+       }
+   }
+
+        var cityId=t.getQueryString("id");//城市id
+        var user_id = sessionStorage.user_id || localStorage.user_id;
+        var token = sessionStorage.token || localStorage.token;
+        if (!(user_id && token)) {
+            location.href = '/gg/login.html?next=/gg/past/'+cityId+'.html?id='+cityId;
+        }
+    </script>
+    <!-- FOR IE9 below -->
+    <!--[if lt IE 9]>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div id="fh5co-page" >
+    <div class="app" v-cloak>
+    <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
+    <aside id="fh5co-aside" role="complementary" class="border js-fullheight">
+        <h1 id="fh5co-logo"><a href="/gg/blogs.html">HEANNY.CN</a></h1>
+        <nav id="fh5co-main-menu" role="navigation">
+            <ul >
+                   <li class="index_li"><a href="/gg/blogs.html">Home</a></li>
+                <li class="blog_li"><a href="/gg/blog.html">
+                        Blog<span class="badge blogNum">[[counts]]</span>
+                    </a></li>
+
+
+                <li class="gbook_li"><a href="/gg/gbook.html" title="留言">
+                        Gbook<span class="badge gbookNum">[[quantity]]</span>
+                    </a></li>
+
+                <li class="login_li"><a href="/gg/login.html">Sign In</a></li>
+              <li id='user_li'><a href='/gg/user.html' title='用户中心'>[[ name ]]</a></li>
+                <li id ='logo_li'><a href='#' @click="logout" title='注销'>LOGOUT</a> </li></ul></ul>
+        </nav>
+        <div class="fh5co-footer">
+
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <ul>
+                <li>
+                    <a href="#" target="_blank" id="Twitter" data-toggle="tooltip" data-placement="top" title="Twitter">
+                        <i class="icon-twitter2"></i></a>
+                </li>
+                <li>
+                    <a href="http://weibo.com/hua199501" target="_blank" id="WeiBo" data-toggle="tooltip"
+                       data-placement="top"
+                       title="WeiBo">
+                        <i class="icon-sina-weibo"></i></a>
+                </li>
+                <li>
+                    <a href="#" target="_blank" id="Linkedin" data-toggle="tooltip" data-placement="top"
+                       title="Linkedin">
+                        <i class="icon-linkedin22"></i></a>
+                </li>
+                <li>
+                    <a href="https://github.com/beichenyulu" target="_blank" id="Github" data-toggle="tooltip"
+                       data-placement="top" title="Github">
+                        <i class="icon-github"></i></a>
+                </li>
+            </ul>
+        </div>
+
+    </aside>
+
+    <div id="fh5co-main">
+        <aside id="fh5co-hero">
+            <!--正文-->
+            <div class=" col-padding animate-box fadeInLeft animated post_body" id="P_note_box">
+                <div class="row">
+                                            <div class="col-md-8">
+                            <div class="blog_title">
+                                <h1 class="fh5co-heading-colored animate-box" style="    padding-top: 10px;">
+                                                                        CentOS7.0下，apache不能正常运行的解决思路 <a class="blog_collect" href="javascript:collect(-1)"><img src="/images/collect.png" alt=""></a>                                </h1>
+                                <div class="animate-box fadeInLeft"
+                                     style="    padding-left: 20px;    padding-top: 10px;">
+                                    <span class="dtime" style="padding-left: 15px ">2019-04-11</span>
+                                    <span class="viewnum" style="padding-left: 15px ;margin-left: 30px;">
+									13146							</span>
+                                </div>
+                                <div class="cloud ">
+                                    <ul style="padding-top: 0 !important;">
+                                        <a href="javascropt:void(0);" class="animate-box">pycharm</a><a href="javascropt:void(0);" class="animate-box">破解</a>                                    </ul>
+                                </div>
+
+                            </div>
+                            <!--<div class='top_50'></div>-->
+                            <div class="col-md-12 col-xs-12 NoteBox" style="background-color: white">
+                                <div class="NoteBody animate-box">
+                                    <!--?= stripslashes($dataarr->content) ?-->
+
+                                                                       <!--?= stripslashes($dataarr->content) ?-->                                    <p style="color: rgb(51, 51, 51); font-family: Arial; line-height: 26px; white-space: normal; background-color: rgb(255, 255, 255);">问题表现：在虚拟机中安装好apache的rpm包，在真实机上却无法访问。</p><p style="color: rgb(51, 51, 51); font-family: Arial; line-height: 26px; white-space: normal; background-color: rgb(255, 255, 255);">&nbsp;</p><p style="color: rgb(51, 51, 51); font-family: Arial; line-height: 26px; white-space: normal; background-color: rgb(255, 255, 255);">解决思路：</p><p style="color: rgb(51, 51, 51); font-family: Arial; line-height: 26px; white-space: normal; background-color: rgb(255, 255, 255);">1.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;确定你的Apache是否安装</p><p style="color: rgb(51, 51, 51); font-family: Arial; line-height: 26px; white-space: normal; background-color: rgb(255, 255, 255);">如果和我一样，使用的是yum安装Apache的rpm包</p><p style="color: rgb(51, 51, 51); font-family: Arial; line-height: 26px; white-space: normal; background-color: rgb(255, 255, 255);">首先检查apache是否正确安装，命令如下</p><p style="color: rgb(51, 51, 51); font-family: Arial; line-height: 26px; white-space: normal; background-color: rgb(255, 255, 255);">rpm –qa|grep httpd*</p><p style="color: rgb(51, 51, 51); font-family: Arial; line-height: 26px; white-space: normal; background-color: rgb(255, 255, 255);">若没有相关返回值，则说明你的apache并没有安装成功</p><p style="color: rgb(51, 51, 51); font-family: Arial; line-height: 26px; white-space: normal; background-color: rgb(255, 255, 255);">&nbsp;</p><p style="color: rgb(51, 51, 51); font-family: Arial; line-height: 26px; white-space: normal; background-color: rgb(255, 255, 255);">2.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;确定Apache的安装方式及启动方法</p><p style="color: rgb(51, 51, 51); font-family: Arial; line-height: 26px; white-space: normal; background-color: rgb(255, 255, 255);">我在这里绕了很大的弯路！</p><p style="color: rgb(51, 51, 51); font-family: Arial; line-height: 26px; white-space: normal; background-color: rgb(255, 255, 255);">如果你使用的是yum安装Apache的rpm包，那么你的默认位置是</p><p style="color: rgb(51, 51, 51); font-family: Arial; line-height: 26px; white-space: normal; background-color: rgb(255, 255, 255);">cd /etc/httpd</p><p style="color: rgb(51, 51, 51); font-family: Arial; line-height: 26px; white-space: normal; background-color: rgb(255, 255, 255);">启动apache的命令是</p><p style="color: rgb(51, 51, 51); font-family: Arial; line-height: 26px; white-space: normal; background-color: rgb(255, 255, 255);">httpd –k start</p><p style="color: rgb(51, 51, 51); font-family: Arial; line-height: 26px; white-space: normal; background-color: rgb(255, 255, 255);">同理，重启、关闭的命令分别是</p><p style="color: rgb(51, 51, 51); font-family: Arial; line-height: 26px; white-space: normal; background-color: rgb(255, 255, 255);">httpd –k restart</p><p style="color: rgb(51, 51, 51); font-family: Arial; line-height: 26px; white-space: normal; background-color: rgb(255, 255, 255);">httpd –k stop</p><p style="color: rgb(51, 51, 51); font-family: Arial; line-height: 26px; white-space: normal; background-color: rgb(255, 255, 255);">&nbsp;</p><p style="color: rgb(51, 51, 51); font-family: Arial; line-height: 26px; white-space: normal; background-color: rgb(255, 255, 255);"><span style="font-size: 24px; color: #FF0000;">注意注意注意！</span></p><p style="color: rgb(51, 51, 51); font-family: Arial; line-height: 26px; white-space: normal; background-color: rgb(255, 255, 255);">网上很多教程，写的apache教程目录为</p><p style="color: rgb(51, 51, 51); font-family: Arial; line-height: 26px; white-space: normal; background-color: rgb(255, 255, 255);"><span style="color: #3B3B3B;">/usr/local/apache</span></p><p style="color: rgb(51, 51, 51); font-family: Arial; line-height: 26px; white-space: normal; background-color: rgb(255, 255, 255);">然后通过命令</p><p style="color: rgb(51, 51, 51); font-family: Arial; line-height: 26px; white-space: normal; background-color: rgb(255, 255, 255);">/usr/local/apache/bin/apachectl startapache</p><p style="color: rgb(51, 51, 51); font-family: Arial; line-height: 26px; white-space: normal; background-color: rgb(255, 255, 255);">或者</p><p style="color: rgb(51, 51, 51); font-family: Arial; line-height: 26px; white-space: normal; background-color: rgb(255, 255, 255);">service httpd start</p><p style="color: rgb(51, 51, 51); font-family: Arial; line-height: 26px; white-space: normal; background-color: rgb(255, 255, 255);">那是因为，别人不是使用的rpm包安装，而是用的官网压缩包。所以，根据安装的方式，一定要找对apache教程。要不和我一样，死活启动不了。</p><p style="color: rgb(51, 51, 51); font-family: Arial; line-height: 26px; white-space: normal; background-color: rgb(255, 255, 255);">&nbsp;</p><p style="color: rgb(51, 51, 51); font-family: Arial; line-height: 26px; white-space: normal; background-color: rgb(255, 255, 255);">3.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;检查是否已经启动</p><p style="color: rgb(51, 51, 51); font-family: Arial; line-height: 26px; white-space: normal; background-color: rgb(255, 255, 255);">使用命令</p><p style="color: rgb(51, 51, 51); font-family: Arial; line-height: 26px; white-space: normal; background-color: rgb(255, 255, 255);">ps –ef|grep httpd*</p><p style="color: rgb(51, 51, 51); font-family: Arial; line-height: 26px; white-space: normal; background-color: rgb(255, 255, 255);">如果存在用户名为apache的进程，则说明运行成功</p><p style="color: rgb(51, 51, 51); font-family: Arial; line-height: 26px; white-space: normal; background-color: rgb(255, 255, 255);">&nbsp;</p><p style="color: rgb(51, 51, 51); font-family: Arial; line-height: 26px; white-space: normal; background-color: rgb(255, 255, 255);">4.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;配置端口</p><p style="color: rgb(51, 51, 51); font-family: Arial; line-height: 26px; white-space: normal; background-color: rgb(255, 255, 255);">使用yum安装的rpm压缩包，配置文件路径为</p><p style="color: rgb(51, 51, 51); font-family: Arial; line-height: 26px; white-space: normal; background-color: rgb(255, 255, 255);">/etc/httpd/conf</p><p style="color: rgb(51, 51, 51); font-family: Arial; line-height: 26px; white-space: normal; background-color: rgb(255, 255, 255);">找到对应的Listen，将端口值改为8080。</p><p style="color: rgb(51, 51, 51); font-family: Arial; line-height: 26px; white-space: normal; background-color: rgb(255, 255, 255);">&nbsp;</p><p style="color: rgb(51, 51, 51); font-family: Arial; line-height: 26px; white-space: normal; background-color: rgb(255, 255, 255);">5.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;检查端口是否正常开放</p><p style="color: rgb(51, 51, 51); font-family: Arial; line-height: 26px; white-space: normal; background-color: rgb(255, 255, 255);">这里又是我被坑惨的地方。</p><p style="color: rgb(51, 51, 51); font-family: Arial; line-height: 26px; white-space: normal; background-color: rgb(255, 255, 255);">请使用以下命令</p><p style="color: rgb(51, 51, 51); font-family: Arial; line-height: 26px; white-space: normal; background-color: rgb(255, 255, 255);">netstat –an，如果有8080端口，则说明开放端口成功。</p><p style="color: rgb(51, 51, 51); font-family: Arial; line-height: 26px; white-space: normal; background-color: rgb(255, 255, 255);"><span style="font-size: 18px; color: #FF0000;">注意！</span>不要只使用netstat查看，因为根本<span style="font-size: 18px; color: #FF0000;">看!不!到!</span>。我就是因为命令使用错误，没有看见端口打开，以为自己哪里出问题了。</p><p style="color: rgb(51, 51, 51); font-family: Arial; line-height: 26px; white-space: normal; background-color: rgb(255, 255, 255);">&nbsp;</p><p style="color: rgb(51, 51, 51); font-family: Arial; line-height: 26px; white-space: normal; background-color: rgb(255, 255, 255);">6.最后，将网页的<a href="http://lib.csdn.net/base/softwaretest" class="replace_word" title="软件测试知识库" target="_blank" style="color: rgb(223, 52, 52); text-decoration: none; font-weight: bold;">测试</a>文件放入/var/www/html下，即可登录验证。</p><p style="color: rgb(51, 51, 51); font-family: Arial; line-height: 26px; white-space: normal; background-color: rgb(255, 255, 255);">若还是不行，说明防火墙打开，关闭防火墙即可。</p><p style="font-family: &#39;Fira Sans&#39;, &#39;Source Sans Pro&#39;, Helvetica, arial, &#39;Microsoft Yahei&#39;; font-size: 16px; margin-top: 0px; margin-bottom: 0px; padding: 8px 0px; list-style: none; line-height: 30.4px; text-align: justify; color: rgb(42, 42, 42); word-break: break-all; white-space: normal; background-color: rgb(255, 255, 255);">首先检查80商品是否已经开启</p><p><a class="btn copybtn" style="transition: all 0.3s; color: rgb(255, 255, 255); font-size: 12px; line-height: 1.42857; display: inline-block; margin-bottom: 0px; margin-left: 1px; padding: 5px 10px; cursor: pointer; -webkit-user-select: none; text-align: center; vertical-align: middle; border: 1px solid transparent; border-radius: 4px; margin-top: 10px; font-family: &#39;Fira Sans&#39;, &#39;Source Sans Pro&#39;, Helvetica, arial, &#39;Microsoft Yahei&#39;; background: rgb(244, 100, 95);">复制代码</a></p><pre class="brush:bash;toolbar:false; ace_editor inited ace-monokai ace_dark" id="runcode0" style="font-family: Monaco, Menlo, &#39;Ubuntu Mono&#39;, Consolas, source-code-pro, monospace; margin-top: 10px; margin-bottom: 0px; padding: 0px; list-style: none; position: relative; overflow: hidden; font-stretch: normal; direction: ltr; color: rgb(248, 248, 242); width: 700px; height: 26px; max-height: 600px !important; background-color: rgb(39, 40, 34);">1netstat&nbsp;-an&nbsp;|&nbsp;grep&nbsp;80</pre><p style="font-family: &#39;Fira Sans&#39;, &#39;Source Sans Pro&#39;, Helvetica, arial, &#39;Microsoft Yahei&#39;; font-size: 16px; margin-top: 0px; margin-bottom: 0px; padding: 8px 0px; list-style: none; line-height: 30.4px; text-align: justify; color: rgb(42, 42, 42); word-break: break-all; white-space: normal; background-color: rgb(255, 255, 255);">运行后如果出现下图：</p><p style="font-family: &#39;Fira Sans&#39;, &#39;Source Sans Pro&#39;, Helvetica, arial, &#39;Microsoft Yahei&#39;; font-size: 16px; margin-top: 0px; margin-bottom: 0px; padding: 8px 0px; list-style: none; line-height: 30.4px; text-align: justify; color: rgb(42, 42, 42); word-break: break-all; white-space: normal; background-color: rgb(255, 255, 255);"><img src="https://www.zhaokeli.com/uploads/image/20151108/1446978467712219.png" title="1446978467712219.png" alt="QQ截图20151108182659.png" style="border: 0px; -webkit-font-smoothing: antialiased; vertical-align: top; font-size: 14px; max-width: 100%;"/></p><p style="font-family: &#39;Fira Sans&#39;, &#39;Source Sans Pro&#39;, Helvetica, arial, &#39;Microsoft Yahei&#39;; font-size: 16px; margin-top: 0px; margin-bottom: 0px; padding: 8px 0px; list-style: none; line-height: 30.4px; text-align: justify; color: rgb(42, 42, 42); word-break: break-all; white-space: normal; background-color: rgb(255, 255, 255);">说明apache已经运行啦</p><p style="font-family: &#39;Fira Sans&#39;, &#39;Source Sans Pro&#39;, Helvetica, arial, &#39;Microsoft Yahei&#39;; font-size: 16px; margin-top: 0px; margin-bottom: 0px; padding: 8px 0px; list-style: none; line-height: 30.4px; text-align: justify; color: rgb(42, 42, 42); word-break: break-all; white-space: normal; background-color: rgb(255, 255, 255);">但这时候如果从浏览器访问测试的时候还是打不开(我的是这种情况)</p><p style="font-family: &#39;Fira Sans&#39;, &#39;Source Sans Pro&#39;, Helvetica, arial, &#39;Microsoft Yahei&#39;; font-size: 16px; margin-top: 0px; margin-bottom: 0px; padding: 8px 0px; list-style: none; line-height: 30.4px; text-align: justify; color: rgb(42, 42, 42); word-break: break-all; white-space: normal; background-color: rgb(255, 255, 255);">这个时候就要在服务器上打开浏览器测试看服务器本地访问是不是正常啦</p><p style="font-family: &#39;Fira Sans&#39;, &#39;Source Sans Pro&#39;, Helvetica, arial, &#39;Microsoft Yahei&#39;; font-size: 16px; margin-top: 0px; margin-bottom: 0px; padding: 8px 0px; list-style: none; line-height: 30.4px; text-align: justify; color: rgb(42, 42, 42); word-break: break-all; white-space: normal; background-color: rgb(255, 255, 255);">使用下面命令打开 &nbsp;http://127.0.0.1</p><p><a class="btn copybtn" style="transition: all 0.3s; color: rgb(255, 255, 255); font-size: 12px; line-height: 1.42857; display: inline-block; margin-bottom: 0px; margin-left: 1px; padding: 5px 10px; cursor: pointer; -webkit-user-select: none; text-align: center; vertical-align: middle; border: 1px solid transparent; border-radius: 4px; margin-top: 10px; font-family: &#39;Fira Sans&#39;, &#39;Source Sans Pro&#39;, Helvetica, arial, &#39;Microsoft Yahei&#39;; background: rgb(244, 100, 95);">复制代码</a></p><pre class="brush:bash;toolbar:false; ace_editor ace-monokai ace_dark inited" id="runcode1" style="font-family: Monaco, Menlo, &#39;Ubuntu Mono&#39;, Consolas, source-code-pro, monospace; margin-top: 10px; margin-bottom: 0px; padding: 0px; list-style: none; position: relative; overflow: hidden; font-stretch: normal; direction: ltr; color: rgb(248, 248, 242); width: 700px; height: 26px; max-height: 600px !important; background-color: rgb(39, 40, 34);">1curl&nbsp;http://127.0.0.1</pre><p style="font-family: &#39;Fira Sans&#39;, &#39;Source Sans Pro&#39;, Helvetica, arial, &#39;Microsoft Yahei&#39;; font-size: 16px; margin-top: 0px; margin-bottom: 0px; padding: 8px 0px; list-style: none; line-height: 30.4px; text-align: justify; color: rgb(42, 42, 42); word-break: break-all; white-space: normal; background-color: rgb(255, 255, 255);">如果出现 &nbsp;it&#39;s &nbsp;work！ 说明服务器端访问是正常的,这个时候可能是防火墙没有开启80端口</p><p style="font-family: &#39;Fira Sans&#39;, &#39;Source Sans Pro&#39;, Helvetica, arial, &#39;Microsoft Yahei&#39;; font-size: 16px; margin-top: 0px; margin-bottom: 0px; padding: 8px 0px; list-style: none; line-height: 30.4px; text-align: justify; color: rgb(42, 42, 42); word-break: break-all; white-space: normal; background-color: rgb(255, 255, 255);"><br style="font-size: 14px;"/></p><p style="font-family: &#39;Fira Sans&#39;, &#39;Source Sans Pro&#39;, Helvetica, arial, &#39;Microsoft Yahei&#39;; font-size: 16px; margin-top: 0px; margin-bottom: 0px; padding: 8px 0px; list-style: none; line-height: 30.4px; text-align: justify; color: rgb(42, 42, 42); word-break: break-all; white-space: normal; background-color: rgb(255, 255, 255);">CentOS 7.0默认使用的是firewall作为防火墙，将防火墙关闭再试下</p><p><a class="btn copybtn" style="transition: all 0.3s; color: rgb(255, 255, 255); font-size: 12px; line-height: 1.42857; display: inline-block; margin-bottom: 0px; margin-left: 1px; padding: 5px 10px; cursor: pointer; -webkit-user-select: none; text-align: center; vertical-align: middle; border: 1px solid transparent; border-radius: 4px; margin-top: 10px; font-family: &#39;Fira Sans&#39;, &#39;Source Sans Pro&#39;, Helvetica, arial, &#39;Microsoft Yahei&#39;; background: rgb(244, 100, 95);">复制代码</a></p><pre class="brush:bash;toolbar:false; ace_editor ace-monokai ace_dark inited" id="runcode2" style="font-family: Monaco, Menlo, &#39;Ubuntu Mono&#39;, Consolas, source-code-pro, monospace; margin-top: 10px; margin-bottom: 0px; padding: 0px; list-style: none; position: relative; overflow: hidden; font-stretch: normal; direction: ltr; color: rgb(248, 248, 242); width: 700px; height: 26px; max-height: 600px !important; background-color: rgb(39, 40, 34);">1systemctl&nbsp;stop&nbsp;firewalld.service</pre><p style="font-family: &#39;Fira Sans&#39;, &#39;Source Sans Pro&#39;, Helvetica, arial, &#39;Microsoft Yahei&#39;; font-size: 16px; margin-top: 0px; margin-bottom: 0px; padding: 8px 0px; list-style: none; line-height: 30.4px; text-align: justify; color: rgb(42, 42, 42); word-break: break-all; white-space: normal; background-color: rgb(255, 255, 255);">再打开试下 &nbsp;ok &nbsp;成功</p><p><br/></p>                                    <br/>                                    <wb:share-button appkey="4275131013" addition="simple" type="button"                                                     ralateUid="2247236875"></wb:share-button>                                
+
+
+
+
+                            </div>
+                            </div>
+                            <!--相邻文章-->
+                            <div class="fh5co-narrow-content animate-box" data-animate-effect="fadeInLeft"
+                                 style="padding: 4em 0 0 0;">
+                                <h4><a href="#" ></a></h4><h4><a href="#" ></a></h4>                            </div>
+                            <!--相邻文章 end-->
+                            <!--全部评论-->
+                            <div class="fh5co-narrow-content animate-box" data-animate-effect="fadeInLeft"
+                                 id="P_comments"
+                                 style="padding: 1em 0 !important;">
+                                <div class="row">
+                                    <div class="CommentJq">
+                                        <ul v-if="stack" class="list  animate-box linlimeng" data-animate-effect="fadeInLeft">
+
+                                            <li v-for="value in stack" class="animate-box col-xs-12 col-md-12 fadeInLeft animated"
+                                                        data-animate-effect="fadeInLeft"
+                                                        id="P_com_0">
+                                                        <div class="col-md-2 col-xs-2 col-lg-2">
+                                                            <img :src="value.user.head" style="height: 4em;width: 4em;"
+                                                                 class="img-circle"/>
+                                                        </div>
+                                                        <div class="col-md-10 col-xs-10 col-lg-10" style=";position: relative;">
+                                                            <a>[[value.user.name]]</a>
+                                                            <small style="margin-left: 1em">[[value.time]]</small>
+                                                            <p style="margin: 10px auto">[[value.text]]
+</p>
+                                                        </div>
+                                                    </li>
+
+
+                                        </ul>
+                                        <ul v-else class="list  animate-box" data-animate-effect="fadeInLeft">
+
+                                        </ul>
+                                        <div class="more col-xs-8 col-md-10  animate-box " style="display: none;"
+                                             id="ComMore"
+                                             data-animate-effect="fadeInLeft">
+                                            <a href="javascript:void (0);" onClick="CommentJq.loadMore();">加载更多</a>
+                                        </div>
+                                        <div class="comment_box animate-box" data-animate-effect="fadeInLeft"
+                                             id="P_comment_box">
+                                            <h4>Submit your comments</h4>
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                <textarea name="" id="P_message" v-model="commentss" cols="30" rows="7" class="form-control"
+                                                          placeholder="Comment"></textarea>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input type="button" @click='comments'
+                                                               class="btn btn-primary btn-md" value="评论" >
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4" >
+                            <div class="about animate-box"
+                                 style="background:#FFF url(/images/banner4.png) no-repeat top center">
+                                <div class="avatar"><img :src="head"
+                                                         class="img-circle " alt=""></div>
+                                <p class="abname"><span class="about_name">Heanny</span> |
+                                    <span class="about_user">[[name]]</span>
+                                </p>
+                                <p class="abposition">[[profession]]</p>
+                                <div class="abtext"><p style="text-align: center">[[ introduce]]</p>
+                                </div>
+                            </div>
+                            <div class="relevant animate-box">
+                                <div style="margin-left: 1em">
+                                    <h3 class="articles">
+                                        相关文章
+                                    </h3>
+                                    <ul class="articles_title ">
+                                        无                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                                        </div>
+            </div>
+            <!--正文 end-->
+        </aside>
+    </div>
+</div>
+
+<!-- jQuery -->
+<script src="/gg/js/jquery.min.js"></script>
+<script src="/http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
+<!-- jQuery Easing -->
+<script src="/gg/js/jquery.easing.1.3.js"></script>
+<!-- Bootstrap -->
+<script src="/gg/js/bootstrap.min.js"></script>
+<!-- Waypoints -->
+<script src="/gg/js/jquery.waypoints.min.js"></script>
+<!-- Flexslider -->
+<script src="/gg/js/jquery.flexslider-min.js"></script>
+
+<!-- MAIN JS -->
+
+
+<script src="/gg/js/user.js"></script>
+<!--加载动画啊啊啊啊 -->
+<script>
+    function loadMorePc() {
+        $('#P_comments ul li').show();
+        $('#P_comments ul h4').hide();
+    }
+</script>
+<!--加载js-->
+    </div>
+</body>
+</html>
+
+

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html xmlns:wb="http://open.weibo.com/wb">
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta name="referrer" content="no-referrer"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title> HeannyBlog | 个人博客</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="浪子"/>
+    <meta name="keywords"
+          content="浪子"/>
+    <!-- Facebook and Twitter integration -->
+    <meta property="og:title" content=""/>
+    <meta property="og:image" content=""/>
+    <meta property="og:url" content=""/>
+    <meta property="og:site_name" content=""/>
+    <meta property="og:description" content=""/>
+    <meta name="twitter:title" content=""/>
+    <meta name="twitter:image" content=""/>
+    <meta name="twitter:url" content=""/>
+    <meta name="twitter:card" content=""/>
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="/gg/css/animate.css">
+    <!-- Icomoon Icon Fonts-->
+    <link rel="stylesheet" href="/gg/css/icomoon.css">
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" href="/gg/css/bootstrap.css">
+    <!-- Flexslider  -->
+    <link rel="stylesheet" href="/gg/css/flexslider.css">
+    <!-- Theme style  -->
+    <link rel="stylesheet" href="/gg/css/style.css">
+    <link rel="stylesheet" href="/gg/css/blog.css">
+    <link rel="stylesheet" href="/gg/css/loading.css">
+    <link rel="stylesheet" href="/gg/css/page_style.css">
+    <!-- Modernizr JS -->
+    <script src="/gg/js/host.js"></script>
+    <script src="/gg/js/vue-2.5.16.js"></script>
+    <script src="/gg/js/axios-0.18.0.min.js"></script>
+    <script src="/gg/js/modernizr-2.6.2.min.js"></script>
+    <script>
+        var t={
+       getQueryString:function(name){
+          var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+          var r = window.location.search.substr(1).match(reg);
+          if(r!=null)
+            return  decodeURI(r[2]);
+            return null;
+       }
+   }
+
+        var cityId=t.getQueryString("id");//城市id
+        var user_id = sessionStorage.user_id || localStorage.user_id;
+        var token = sessionStorage.token || localStorage.token;
+        if (!(user_id && token)) {
+            location.href = '/gg/login.html?next=/gg/past/'+cityId+'.html?id='+cityId;
+        }
+    </script>
+    <!-- FOR IE9 below -->
+    <!--[if lt IE 9]>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div id="fh5co-page" >
+    <div class="app" v-cloak>
+    <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
+    <aside id="fh5co-aside" role="complementary" class="border js-fullheight">
+        <h1 id="fh5co-logo"><a href="/gg/blogs.html">HEANNY.CN</a></h1>
+        <nav id="fh5co-main-menu" role="navigation">
+            <ul >
+                   <li class="index_li"><a href="/gg/blogs.html">Home</a></li>
+                <li class="blog_li"><a href="/gg/blog.html">
+                        Blog<span class="badge blogNum">[[counts]]</span>
+                    </a></li>
+
+
+                <li class="gbook_li"><a href="/gg/gbook.html" title="留言">
+                        Gbook<span class="badge gbookNum">[[quantity]]</span>
+                    </a></li>
+
+                <li class="login_li"><a href="/gg/login.html">Sign In</a></li>
+              <li id='user_li'><a href='/gg/user.html' title='用户中心'>[[ name ]]</a></li>
+                <li id ='logo_li'><a href='#' @click="logout" title='注销'>LOGOUT</a> </li></ul></ul>
+        </nav>
+        <div class="fh5co-footer">
+
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <ul>
+                <li>
+                    <a href="#" target="_blank" id="Twitter" data-toggle="tooltip" data-placement="top" title="Twitter">
+                        <i class="icon-twitter2"></i></a>
+                </li>
+                <li>
+                    <a href="http://weibo.com/hua199501" target="_blank" id="WeiBo" data-toggle="tooltip"
+                       data-placement="top"
+                       title="WeiBo">
+                        <i class="icon-sina-weibo"></i></a>
+                </li>
+                <li>
+                    <a href="#" target="_blank" id="Linkedin" data-toggle="tooltip" data-placement="top"
+                       title="Linkedin">
+                        <i class="icon-linkedin22"></i></a>
+                </li>
+                <li>
+                    <a href="https://github.com/beichenyulu" target="_blank" id="Github" data-toggle="tooltip"
+                       data-placement="top" title="Github">
+                        <i class="icon-github"></i></a>
+                </li>
+            </ul>
+        </div>
+
+    </aside>
+
+    <div id="fh5co-main">
+        <aside id="fh5co-hero">
+            <!--正文-->
+            <div class=" col-padding animate-box fadeInLeft animated post_body" id="P_note_box">
+                <div class="row">
+                                            <div class="col-md-8">
+                            <div class="blog_title">
+                                <h1 class="fh5co-heading-colored animate-box" style="    padding-top: 10px;">
+                                                                        【转】虚拟机VMware安装PhoenixOS(凤凰OS) <a class="blog_collect" href="javascript:collect(-1)"><img src="/images/collect.png" alt=""></a>                                </h1>
+                                <div class="animate-box fadeInLeft"
+                                     style="    padding-left: 20px;    padding-top: 10px;">
+                                    <span class="dtime" style="padding-left: 15px ">2019-04-11</span>
+                                    <span class="viewnum" style="padding-left: 15px ;margin-left: 30px;">
+									14483							</span>
+                                </div>
+                                <div class="cloud ">
+                                    <ul style="padding-top: 0 !important;">
+                                        <a href="javascropt:void(0);" class="animate-box">pycharm</a><a href="javascropt:void(0);" class="animate-box">破解</a>                                    </ul>
+                                </div>
+
+                            </div>
+                            <!--<div class='top_50'></div>-->
+                            <div class="col-md-12 col-xs-12 NoteBox" style="background-color: white">
+                                <div class="NoteBody animate-box">
+                                    <!--?= stripslashes($dataarr->content) ?-->
+
+                                                                       <!--?= stripslashes($dataarr->content) ?-->                                    <p><span style="font-family: 楷体, 楷体_GB2312, SimKai; font-size: 18px;">最近在测试安卓app，服务器里面没有显卡，不能安装虚拟机，只能安装Android系统，所以又重新折腾Phoenix，以下是转自csdn的一篇文章，步骤完全（我用的VMware vSphere Client，创建步骤略有不同）</span><br/></p><p><span style="font-family: 楷体, 楷体_GB2312, SimKai; font-size: 18px;"></span></p><hr/><p><span style="font-family: 楷体, 楷体_GB2312, SimKai; font-size: 18px;"></span><br/></p><p>虚拟机VMware安装PhoenixOS(凤凰OS)</p><p>0.什么是PhoenixOS</p><p>1.下载PhoenixOS镜像</p><p>2.下载VMware</p><p>3.开始安装系统</p><p>第一步新建虚拟机</p><p>第二步安装PhoenixOS</p><p>第三步为PhoenixOS引导添加nomodeset参数</p><p>第四步首次进入系统</p><p>4.体验系统</p><p>0.什么是PhoenixOS</p><p>曾经开发了著名浏览器世界之窗(The World)的凤凰工作室在变身为北京超卓科技有限公司之后，吸引了奇虎360、阿里巴巴的一些研发成员，打造出了一套“凤凰系统”(Phoenix OS)，简单说就是x86桌面版的安卓。1.凤凰系统—百度百科</p><p>PhoenixOS就是x86版安卓，能在PC等x86或x64构架处理器的计算机上运行。</p><p><br/></p><p>安装前须知：&nbsp;</p><p>安装需要的环境： 在电脑中打开VT或者VT-d(硬件虚拟化技术)。（由于各个电脑打开方式虽说大相径庭但是仍有区别，所以最好自己百度“电脑型号+打开vt（或者硬件虚拟化技术）”&nbsp;</p><p>安装需要的工具： PhoenixOS镜像、Vmware</p><p><br/></p><p>1.下载PhoenixOS镜像</p><p>首先在官网(http://www.phoenixos.com/)中下载最新的PhoenixOS镜像文件（在我写这篇博客时，PhoenixOS已经更新到v2.6.3，基于Android7.1)&nbsp;</p><p>1.打开官网]&nbsp;</p><p><br/></p><p>2.点击“凤凰系统”&nbsp;</p><p><br/></p><p>3.点击“PC版”&nbsp;</p><p><img src="http://cms.heanny.cn/js/uediter/themes/default/images/spacer.gif"/><img src="/update/Blog/201810261540536827337658.png" title="201810261540536827337658.png" alt="1.png" width="736" height="406"/></p><p><img src="http://cms.heanny.cn/js/uediter/themes/default/images/spacer.gif"/></p><p>4.在打开的界面往下移，移到其他安装方式，选择PhoenixOSInstaller-v2.6.3 (基于 Android7.1)ISO镜像，点击官方下载。等待下载完成，这样你的PhoenixOS镜像就下载完成了。&nbsp;</p><p><br/></p><p><br/></p><p>2.下载VMware</p><p>这项自行百度，百度上一大堆破解资源，VM12及以上就行了</p><p><br/></p><p>3.开始安装系统</p><p>第一步新建虚拟机</p><p>1.点击创建新的虚拟机&nbsp;</p><p><img src="/update/Blog/201810261540536854136152.png" title="201810261540536854136152.png" alt="2.png" width="460" height="213"/></p><p>2.弹出欢迎使用新建虚拟机向导，选择“典型（推荐）”，下一步&nbsp;</p><p><br/></p><p>3.选择“安装程序光盘映像文件”，选择你刚刚下好的PhoenixOS ISO镜像文件，它会自动显示已检测到FreeBSD，点击下一步</p><p><img src="/update/Blog/201810261540536878838941.png" title="201810261540536878838941.png" alt="3.png" width="738" height="252"/></p><p><br/></p><p>4.命名虚拟机&nbsp;</p><p><br/></p><p>5.把虚拟机名称自己命名，推荐就PhoenixOS，然后选择虚拟机放在磁盘中的位置。然后下一步&nbsp;</p><p><br/></p><p>6.分配虚拟机大小。随便你分配，只要大小恰当(系统大小+预计会安装软件的大小+3G以上的缓存及其他文件存放空间)，反正我就直接整的32G(傲娇脸)，然后下一步&nbsp;</p><p><br/></p><p>7.弹出“已准备好创建虚拟机”，选择自定义硬件&nbsp;</p><p><br/></p><p>8.在弹出的窗口中选择内存，根据自己电脑的内存来修改给虚拟机的内存&nbsp;</p><p><br/></p><p>9.再选择“处理器”项根据自己电脑配置选择处理器核心，看自己的处理器是几核几线程的再来修改&nbsp;</p><p><br/></p><p>10.之后就选择关闭，完成。这样虚拟机就创建好了，虚拟机会自动重启，但是这个时候相当于你创建了一个虚拟的电脑，也就是说你现在组装了一台电脑，但是电脑硬盘里面是空的，没系统。下面，咋们开始安装PhoenixOS。</p><p><br/></p><p>第二步安装PhoenixOS</p><p>1.完成创建虚拟机后，虚拟机会自动重启，并打开你ISO文件里面的文件/系统&nbsp;</p><p><br/></p><p>2.选择第二项“Installation - Install Phoenix OS to harddisk”(安装PhoenixOS到硬盘中)&nbsp;</p><p><img src="/update/Blog/201810261540537039991914.png" title="201810261540537039991914.png" alt="20180501173053700.png" width="655" height="453"/></p><p>3.弹出一个窗口&nbsp;</p><p><br/></p><p>4.选择第二项Create/Modify partitons&nbsp;</p><p><img src="http://cms.heanny.cn/update/Blog/201810261540536908705271.png" title="201810261540536908705271.png" alt="2018050117313916.png" width="790" height="444"/></p><p>5.显示是否要使用GPT，但是我们准备用legacy引导系统，所以不需要GPT，选择No，回车&nbsp;</p><p><img src="http://cms.heanny.cn/update/Blog/201810261540536928715531.png" title="201810261540536928715531.png" alt="2018050117344962.png" width="473" height="265"/></p><p>6.接着进入磁盘管理器，可以看到现在之佛与一个大小为21467.99MB的磁盘(因为我之前给虚拟机分配空间时选的是默认的20G)，按方向右键，选择New，回车&nbsp;</p><p><img src="/update/Blog/201810261540537118864041.png" title="201810261540537118864041.png" alt="20180501173704225.png" width="626" height="367"/></p><p>7.选择Primary主要的磁盘，回车&nbsp;</p><p><img src="/update/Blog/201810261540537157605635.png" title="201810261540537157605635.png" alt="20180501173752166.png" width="659" height="337"/></p><p>8.之后选择大小，默认选择最大大小，所以我们不需要修改，直接回车下一步&nbsp;</p><p><img src="/update/Blog/201810261540537187961547.png" title="201810261540537187961547.png" alt="20180501173826667.png" width="662" height="348"/></p><p>9.在选择Bootable引导，回车&nbsp;</p><p><img src="/update/Blog/201810261540537209345339.png" title="201810261540537209345339.png" alt="20180501173856356.png" width="661" height="342"/></p><p>10.方向右键，移到write保存&nbsp;</p><p><img src="/update/Blog/201810261540537226935908.png" title="201810261540537226935908.png" alt="20180501173955531.png" width="661" height="358"/></p><p>11.输入yes，回车&nbsp;</p><p><br/></p><p>12.再按方向右键移到Quit回车，退出磁盘管理系统&nbsp;</p><p><br/></p><p>13.这样咋们磁盘创建就创建成功了，然后选中刚才创建的磁盘，回车&nbsp;</p><p><img src="/update/Blog/201810261540537248668710.png" title="201810261540537248668710.png" alt="20180501174331246.png" width="696" height="459"/></p><p>14.选择磁盘是否格式化，并选择格式化的磁盘类型，选择ext4，回车&nbsp;</p><p><img src="/update/Blog/201810261540537263616418.png" title="201810261540537263616418.png" alt="20180501174418648.png" width="706" height="380"/></p><p>15.弹出说确定时候要格式化，选择yes，回车&nbsp;</p><p><img src="/update/Blog/201810261540537282776389.png" title="201810261540537282776389.png" alt="20180501174457306.png" width="711" height="373"/></p><p>16.弹出说是否要安装EFI GRUB2引导系统，因为我们用的是legacy传统化引导方式，所以选择skip跳过&nbsp;</p><p><img src="/update/Blog/201810261540537307762112.png" title="201810261540537307762112.png" alt="20180501174615785.png" width="721" height="375"/></p><p>17.接着又弹出说是否安装grub引导，选择yes&nbsp;</p><p><img src="/update/Blog/201810261540537331456269.png" title="201810261540537331456269.png" alt="20180501174645708.png" width="721" height="323"/></p><p>18.等待安装完成，完成后弹出说安装成功，选择Run Phoenix OS，选择OK ，回车，重启&nbsp;</p><p><img src="/update/Blog/201810261540537356368190.png" title="201810261540537356368190.png" alt="20180501174741532.png" width="722" height="360"/></p><p>19.目前，我们的PhoenixOS就成功安装在虚拟机内了，接着会自动重启，会卡在这个界面下。然后手动从键盘输入reboot，接着虚拟机重启&nbsp;</p><p><img src="/update/Blog/201810261540537373490347.png" title="201810261540537373490347.png" alt="20180501175109201.png" width="723" height="406"/></p><p><br/></p><p>接下来我们需要打开虚拟机，对虚拟机中的PhoenixOS引导进行配置</p><p><br/></p><p>第三步为PhoenixOS引导添加nomodeset参数</p><pre class="brush:diff;toolbar:false">如果你不加nomodeset，系统将无法启动，但是为什么，抱歉，我不知道，
+如果有安慰大神知道，欢迎留言分享下！！！感谢。
+虚拟机每次重新启动或者关机后启动都得重新再来加一次nomodeset，
+所以当你不用虚拟机时最好选择挂起虚拟机而不是选择关闭虚拟机</pre><p>1.完成上面后，虚拟机会重启，进入引导界面&nbsp;</p><p><img src="/update/Blog/201810261540537396345851.png" title="201810261540537396345851.png" alt="20180501175314693.png" width="732" height="360"/></p><p>2.接着按e，进入如图所示界面&nbsp;</p><p><img src="/update/Blog/201810261540537422332930.png" title="201810261540537422332930.png" alt="20180501175344733.png" width="735" height="411"/></p><p>3.接着再按e，进入如图所示界面&nbsp;</p><p>（重要！！！！！！！！！！）</p><p>4.然后输入“ nomodeset”，注意nomodeset与PhoenixOS中间有个空格，然后回车&nbsp;</p><p><img src="/update/Blog/201810261540537490327602.png" title="201810261540537490327602.png" alt="20180501175556494.png" width="687" height="448"/></p><p>5.之后回到上一级界面，按b启动系统。&nbsp;</p><p><img src="/update/Blog/201810261540537507659927.png" title="201810261540537507659927.png" alt="20180501175636342.png" width="696" height="411"/></p><p>6.闪过系统自检，等待系统启动&nbsp;</p><p><img src="/update/Blog/201810261540537519454805.png" title="201810261540537519454805.png" alt="20180501175711881.png" width="708" height="434"/></p><p><br/></p><p>第四步首次进入系统</p><p>1.完成上面所述步骤后，会出现如下界面 (站长注：这个界面初始化视角比较长，请耐心等待)</p><p><img src="/update/Blog/201810261540537571782305.png" title="201810261540537571782305.png" alt="20180501175754316.png" width="696" height="392"/></p><p>2.等待会，时长根据你电脑配置以及给虚拟机配置的硬件配置而定，然后出现语言选择界面，默认中文，选择下一步&nbsp;</p><p><br/></p><p>3.弹出用户许可，点击接受&nbsp;</p><p><br/></p><p>4.选择网络，因为之前配置是虚拟机于物理机共用网络，所以他会显示你已经连接有线网络&nbsp;</p><p><br/></p><p>5.之后弹出创建账号，输入你想要的用户名&nbsp;</p><p><br/></p><p>6.点击开始体验&nbsp;</p><p><br/></p><p>恭喜你，你已经成功在虚拟机中安装PhoenixOS系统，接下来请尽情享用PhoenixOS x86平台的安卓系统吧！！！</p><p><br/></p><p>4.体验系统</p><p>---------------------&nbsp;</p><p>作者：小柯基_&nbsp;</p><p>来源：CSDN&nbsp;</p><p>原文：https://blog.csdn.net/a1203991686/article/details/80158375&nbsp;</p><p>版权声明：本文为博主原创文章，转载请附上博文链接！</p><p><br/></p>                                    <br/>                                    <wb:share-button appkey="4275131013" addition="simple" type="button"                                                     ralateUid="2247236875"></wb:share-button>                                
+
+
+
+
+                            </div>
+                            </div>
+                            <!--相邻文章-->
+                            <div class="fh5co-narrow-content animate-box" data-animate-effect="fadeInLeft"
+                                 style="padding: 4em 0 0 0;">
+                                <h4><a href="#" ></a></h4><h4><a href="#" ></a></h4>                            </div>
+                            <!--相邻文章 end-->
+                            <!--全部评论-->
+                            <div class="fh5co-narrow-content animate-box" data-animate-effect="fadeInLeft"
+                                 id="P_comments"
+                                 style="padding: 1em 0 !important;">
+                                <div class="row">
+                                    <div class="CommentJq">
+                                        <ul v-if="stack" class="list  animate-box linlimeng" data-animate-effect="fadeInLeft">
+
+                                            <li v-for="value in stack" class="animate-box col-xs-12 col-md-12 fadeInLeft animated"
+                                                        data-animate-effect="fadeInLeft"
+                                                        id="P_com_0">
+                                                        <div class="col-md-2 col-xs-2 col-lg-2">
+                                                            <img :src="value.user.head" style="height: 4em;width: 4em;"
+                                                                 class="img-circle"/>
+                                                        </div>
+                                                        <div class="col-md-10 col-xs-10 col-lg-10" style=";position: relative;">
+                                                            <a>[[value.user.name]]</a>
+                                                            <small style="margin-left: 1em">[[value.time]]</small>
+                                                            <p style="margin: 10px auto">[[value.text]]
+</p>
+                                                        </div>
+                                                    </li>
+
+
+                                        </ul>
+                                        <ul v-else class="list  animate-box" data-animate-effect="fadeInLeft">
+
+                                        </ul>
+                                        <div class="more col-xs-8 col-md-10  animate-box " style="display: none;"
+                                             id="ComMore"
+                                             data-animate-effect="fadeInLeft">
+                                            <a href="javascript:void (0);" onClick="CommentJq.loadMore();">加载更多</a>
+                                        </div>
+                                        <div class="comment_box animate-box" data-animate-effect="fadeInLeft"
+                                             id="P_comment_box">
+                                            <h4>Submit your comments</h4>
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                <textarea name="" id="P_message" v-model="commentss" cols="30" rows="7" class="form-control"
+                                                          placeholder="Comment"></textarea>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input type="button" @click='comments'
+                                                               class="btn btn-primary btn-md" value="评论" >
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4" >
+                            <div class="about animate-box"
+                                 style="background:#FFF url(/images/banner4.png) no-repeat top center">
+                                <div class="avatar"><img :src="head"
+                                                         class="img-circle " alt=""></div>
+                                <p class="abname"><span class="about_name">Heanny</span> |
+                                    <span class="about_user">[[name]]</span>
+                                </p>
+                                <p class="abposition">[[profession]]</p>
+                                <div class="abtext"><p style="text-align: center">[[ introduce]]</p>
+                                </div>
+                            </div>
+                            <div class="relevant animate-box">
+                                <div style="margin-left: 1em">
+                                    <h3 class="articles">
+                                        相关文章
+                                    </h3>
+                                    <ul class="articles_title ">
+                                        无                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                                        </div>
+            </div>
+            <!--正文 end-->
+        </aside>
+    </div>
+</div>
+
+<!-- jQuery -->
+<script src="/gg/js/jquery.min.js"></script>
+<script src="/http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
+<!-- jQuery Easing -->
+<script src="/gg/js/jquery.easing.1.3.js"></script>
+<!-- Bootstrap -->
+<script src="/gg/js/bootstrap.min.js"></script>
+<!-- Waypoints -->
+<script src="/gg/js/jquery.waypoints.min.js"></script>
+<!-- Flexslider -->
+<script src="/gg/js/jquery.flexslider-min.js"></script>
+
+<!-- MAIN JS -->
+
+
+<script src="/gg/js/user.js"></script>
+<!--加载动画啊啊啊啊 -->
+<script>
+    function loadMorePc() {
+        $('#P_comments ul li').show();
+        $('#P_comments ul h4').hide();
+    }
+</script>
+<!--加载js-->
+    </div>
+</body>
+</html>
+
+

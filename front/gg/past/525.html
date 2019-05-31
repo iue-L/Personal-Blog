@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html xmlns:wb="http://open.weibo.com/wb">
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta name="referrer" content="no-referrer"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title> HeannyBlog | 个人博客</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="浪子"/>
+    <meta name="keywords"
+          content="浪子"/>
+    <!-- Facebook and Twitter integration -->
+    <meta property="og:title" content=""/>
+    <meta property="og:image" content=""/>
+    <meta property="og:url" content=""/>
+    <meta property="og:site_name" content=""/>
+    <meta property="og:description" content=""/>
+    <meta name="twitter:title" content=""/>
+    <meta name="twitter:image" content=""/>
+    <meta name="twitter:url" content=""/>
+    <meta name="twitter:card" content=""/>
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="/gg/css/animate.css">
+    <!-- Icomoon Icon Fonts-->
+    <link rel="stylesheet" href="/gg/css/icomoon.css">
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" href="/gg/css/bootstrap.css">
+    <!-- Flexslider  -->
+    <link rel="stylesheet" href="/gg/css/flexslider.css">
+    <!-- Theme style  -->
+    <link rel="stylesheet" href="/gg/css/style.css">
+    <link rel="stylesheet" href="/gg/css/blog.css">
+    <link rel="stylesheet" href="/gg/css/loading.css">
+    <link rel="stylesheet" href="/gg/css/page_style.css">
+    <!-- Modernizr JS -->
+    <script src="/gg/js/host.js"></script>
+    <script src="/gg/js/vue-2.5.16.js"></script>
+    <script src="/gg/js/axios-0.18.0.min.js"></script>
+    <script src="/gg/js/modernizr-2.6.2.min.js"></script>
+    <script>
+        var t={
+       getQueryString:function(name){
+          var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+          var r = window.location.search.substr(1).match(reg);
+          if(r!=null)
+            return  decodeURI(r[2]);
+            return null;
+       }
+   }
+
+        var cityId=t.getQueryString("id");//城市id
+        var user_id = sessionStorage.user_id || localStorage.user_id;
+        var token = sessionStorage.token || localStorage.token;
+        if (!(user_id && token)) {
+            location.href = '/gg/login.html?next=/gg/past/'+cityId+'.html?id='+cityId;
+        }
+    </script>
+    <!-- FOR IE9 below -->
+    <!--[if lt IE 9]>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div id="fh5co-page" >
+    <div class="app" v-cloak>
+    <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
+    <aside id="fh5co-aside" role="complementary" class="border js-fullheight">
+        <h1 id="fh5co-logo"><a href="/gg/blogs.html">HEANNY.CN</a></h1>
+        <nav id="fh5co-main-menu" role="navigation">
+            <ul >
+                   <li class="index_li"><a href="/gg/blogs.html">Home</a></li>
+                <li class="blog_li"><a href="/gg/blog.html">
+                        Blog<span class="badge blogNum">[[counts]]</span>
+                    </a></li>
+
+
+                <li class="gbook_li"><a href="/gg/gbook.html" title="留言">
+                        Gbook<span class="badge gbookNum">[[quantity]]</span>
+                    </a></li>
+
+                <li class="login_li"><a href="/gg/login.html">Sign In</a></li>
+              <li id='user_li'><a href='/gg/user.html' title='用户中心'>[[ name ]]</a></li>
+                <li id ='logo_li'><a href='#' @click="logout" title='注销'>LOGOUT</a> </li></ul></ul>
+        </nav>
+        <div class="fh5co-footer">
+
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <ul>
+                <li>
+                    <a href="#" target="_blank" id="Twitter" data-toggle="tooltip" data-placement="top" title="Twitter">
+                        <i class="icon-twitter2"></i></a>
+                </li>
+                <li>
+                    <a href="http://weibo.com/hua199501" target="_blank" id="WeiBo" data-toggle="tooltip"
+                       data-placement="top"
+                       title="WeiBo">
+                        <i class="icon-sina-weibo"></i></a>
+                </li>
+                <li>
+                    <a href="#" target="_blank" id="Linkedin" data-toggle="tooltip" data-placement="top"
+                       title="Linkedin">
+                        <i class="icon-linkedin22"></i></a>
+                </li>
+                <li>
+                    <a href="https://github.com/beichenyulu" target="_blank" id="Github" data-toggle="tooltip"
+                       data-placement="top" title="Github">
+                        <i class="icon-github"></i></a>
+                </li>
+            </ul>
+        </div>
+
+    </aside>
+
+    <div id="fh5co-main">
+        <aside id="fh5co-hero">
+            <!--正文-->
+            <div class=" col-padding animate-box fadeInLeft animated post_body" id="P_note_box">
+                <div class="row">
+                                            <div class="col-md-8">
+                            <div class="blog_title">
+                                <h1 class="fh5co-heading-colored animate-box" style="    padding-top: 10px;">
+                                                                        python img的操作 <a class="blog_collect" href="javascript:collect(-1)"><img src="/images/collect.png" alt=""></a>                                </h1>
+                                <div class="animate-box fadeInLeft"
+                                     style="    padding-left: 20px;    padding-top: 10px;">
+                                    <span class="dtime" style="padding-left: 15px ">2019-04-11</span>
+                                    <span class="viewnum" style="padding-left: 15px ;margin-left: 30px;">
+									18837							</span>
+                                </div>
+                                <div class="cloud ">
+                                    <ul style="padding-top: 0 !important;">
+                                        <a href="javascropt:void(0);" class="animate-box">pycharm</a><a href="javascropt:void(0);" class="animate-box">破解</a>                                    </ul>
+                                </div>
+
+                            </div>
+                            <!--<div class='top_50'></div>-->
+                            <div class="col-md-12 col-xs-12 NoteBox" style="background-color: white">
+                                <div class="NoteBody animate-box">
+                                    <!--?= stripslashes($dataarr->content) ?-->
+
+                                                                       <!--?= stripslashes($dataarr->content) ?-->                                    <pre class="prism-highlight prism-language-python">#获取截图
+import&nbsp;sys
+import&nbsp;types&nbsp;&nbsp;
+#&nbsp;import&nbsp;url
+import&nbsp;http.client
+import&nbsp;time
+import&nbsp;datetime
+import&nbsp;urllib.request
+import&nbsp;json
+import&nbsp;base64
+#&nbsp;def&nbsp;login_first():
+#&nbsp;url&nbsp;=&nbsp;&quot;http://103.244.254.21/cacti/index.php?action=login&amp;__csrf_magic=sid:ee4027db9b9611d1345e38b4fe126a45ebde0e2d,1503888534&amp;login_username=xxx&amp;login_password=xxx&quot;
+#&nbsp;conn&nbsp;=&nbsp;http.client.HTTPConnection(&quot;103.244.254.21&quot;)
+#&nbsp;conn.request(method=&quot;GET&quot;,url=url)&nbsp;
+#&nbsp;response&nbsp;=&nbsp;conn.getresponse()
+#&nbsp;res=&nbsp;response.read()
+#&nbsp;print&nbsp;(res)
+#&nbsp;denglu&nbsp;
+#&nbsp;login_first()
+d_url&nbsp;=&nbsp;&#39;http://103.244.254.21/cacti/graph_json.php?rra_id=0&amp;graph_height=150&amp;graph_width=550&#39;
+node_1&nbsp;=&nbsp;&quot;tree_anchor-3&quot;
+node_2&nbsp;=&nbsp;&quot;tree_anchor-4&quot;
+node_3&nbsp;=&nbsp;&quot;tree_anchor-5&quot;
+T_anchor_3=[5,104,224,237,222,240,226,225,482,133,135,18]
+T_anchor_4=[293,255,294,292,295,296,251,28,30,539,298,288,253,254,300,305,32,352,282,340,194,347,215,536,533,537,444,513,425,426,384]
+T_anchor_5=[42,52,233,452,224,225,226,240,237,222,163,246,247,357]
+#&nbsp;local_graph_id
+#&nbsp;graph_start=
+#&nbsp;graph_end=
+def&nbsp;get_img():
+url&nbsp;=&nbsp;&quot;&quot;
+today&nbsp;=&nbsp;datetime.date.today()
+#&nbsp;time_1=time.strftime(&quot;%Y-%m-%d-1&quot;)
+#&nbsp;time_2=time.strftime(&quot;%Y-%m-%d&nbsp;00:00&quot;)
+yesterday&nbsp;=&nbsp;today&nbsp;-&nbsp;datetime.timedelta(days=1)
+date_1&nbsp;=&nbsp;str(yesterday)+&quot;&nbsp;00:00&quot;
+date_2&nbsp;=&nbsp;str(today)+&quot;&nbsp;00:00&quot;
+time_1&nbsp;=&nbsp;time.strptime(date_1,&nbsp;&quot;%Y-%m-%d&nbsp;%H:%M&quot;)&nbsp;&nbsp;
+time_2&nbsp;=&nbsp;time.strptime(date_2,&nbsp;&quot;%Y-%m-%d&nbsp;%H:%M&quot;)&nbsp;&nbsp;
+timestamp_1&nbsp;=&nbsp;int(time.mktime(time_1))&nbsp;&nbsp;&nbsp;&nbsp;
+timestamp_2&nbsp;=&nbsp;int(time.mktime(time_2))&nbsp;&nbsp;&nbsp;&nbsp;
+#print(timestamp_1,timestamp_2)
+def&nbsp;get_json():&nbsp;
+headers&nbsp;=&nbsp;{&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#39;Connection&#39;:&#39;keep-alive&#39;,&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#39;Cache-Control&#39;:&#39;max-age=0&#39;,&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#39;Accept&#39;:&nbsp;&#39;text/html,&nbsp;*/*;&nbsp;q=0.01&#39;,&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#39;X-Requested-With&#39;:&nbsp;&#39;XMLHttpRequest&#39;,&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#39;User-Agent&#39;:&nbsp;&#39;Mozilla/5.0&nbsp;(X11;&nbsp;Linux&nbsp;x86_64)&nbsp;AppleWebKit/537.36&nbsp;(KHTML,&nbsp;like&nbsp;Gecko)&nbsp;Chrome/41.0.2272.89&nbsp;Safari/537.36&#39;,&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#39;DNT&#39;:&#39;1&#39;,&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#39;Accept-Encoding&#39;:&nbsp;&#39;gzip,&nbsp;deflate,&nbsp;sdch&#39;,&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#39;Accept-Language&#39;:&nbsp;&#39;zh-CN,zh;q=0.8,ja;q=0.6&#39;,
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#39;Cookie&#39;:&nbsp;&#39;Cacti=o7rhms2forbbc1kfe6cokjr3e3&#39;&nbsp;&nbsp;
+}&nbsp;&nbsp;
+data&nbsp;=&nbsp;None&nbsp;&nbsp;
+req&nbsp;=&nbsp;urllib.request.Request(url,&nbsp;data,&nbsp;headers)&nbsp;&nbsp;
+response&nbsp;=&nbsp;urllib.request.urlopen(req)&nbsp;&nbsp;
+html&nbsp;=&nbsp;response.read()
+s&nbsp;=&nbsp;json.loads(html)
+#&nbsp;print(s.keys())
+return&nbsp;s[&quot;image&quot;]
+if&nbsp;__name__&nbsp;==&nbsp;&quot;__main__&quot;:&nbsp;
+#&nbsp;img_name=time.strftime(&quot;%Y-%m-%d&nbsp;00:00&quot;)&nbsp;
+for&nbsp;i&nbsp;in&nbsp;T_anchor_3:
+url&nbsp;=&nbsp;&quot;%s&amp;graph_start=1503763200&amp;graph_end=1503849600&amp;local_graph_id=%s&quot;%(d_url,i)
+#&nbsp;url=d_url,&#39;&amp;graph_start=1503763200&amp;graph_end=1503849600&amp;local_graph_id=&#39;,i
+#print(url)
+get_img()
+base_json=get_json()
+imgdata=base64.b64decode(base_json)
+#b64decode()为解码，b64encode为编码
+file_name=&#39;%s.png&#39;%i
+print(file_name)
+file=open(file_name,&#39;wb&#39;)&nbsp;&nbsp;
+file.write(imgdata)&nbsp;&nbsp;
+file.close()&nbsp;
+time.sleep(1)</pre><p><br/></p>                                    <br/>                                    <wb:share-button appkey="4275131013" addition="simple" type="button"                                                     ralateUid="2247236875"></wb:share-button>                                
+
+
+
+
+                            </div>
+                            </div>
+                            <!--相邻文章-->
+                            <div class="fh5co-narrow-content animate-box" data-animate-effect="fadeInLeft"
+                                 style="padding: 4em 0 0 0;">
+                                <h4><a href="#" ></a></h4><h4><a href="#" ></a></h4>                            </div>
+                            <!--相邻文章 end-->
+                            <!--全部评论-->
+                            <div class="fh5co-narrow-content animate-box" data-animate-effect="fadeInLeft"
+                                 id="P_comments"
+                                 style="padding: 1em 0 !important;">
+                                <div class="row">
+                                    <div class="CommentJq">
+                                        <ul v-if="stack" class="list  animate-box linlimeng" data-animate-effect="fadeInLeft">
+
+                                            <li v-for="value in stack" class="animate-box col-xs-12 col-md-12 fadeInLeft animated"
+                                                        data-animate-effect="fadeInLeft"
+                                                        id="P_com_0">
+                                                        <div class="col-md-2 col-xs-2 col-lg-2">
+                                                            <img :src="value.user.head" style="height: 4em;width: 4em;"
+                                                                 class="img-circle"/>
+                                                        </div>
+                                                        <div class="col-md-10 col-xs-10 col-lg-10" style=";position: relative;">
+                                                            <a>[[value.user.name]]</a>
+                                                            <small style="margin-left: 1em">[[value.time]]</small>
+                                                            <p style="margin: 10px auto">[[value.text]]
+</p>
+                                                        </div>
+                                                    </li>
+
+
+                                        </ul>
+                                        <ul v-else class="list  animate-box" data-animate-effect="fadeInLeft">
+
+                                        </ul>
+                                        <div class="more col-xs-8 col-md-10  animate-box " style="display: none;"
+                                             id="ComMore"
+                                             data-animate-effect="fadeInLeft">
+                                            <a href="javascript:void (0);" onClick="CommentJq.loadMore();">加载更多</a>
+                                        </div>
+                                        <div class="comment_box animate-box" data-animate-effect="fadeInLeft"
+                                             id="P_comment_box">
+                                            <h4>Submit your comments</h4>
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                <textarea name="" id="P_message" v-model="commentss" cols="30" rows="7" class="form-control"
+                                                          placeholder="Comment"></textarea>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input type="button" @click='comments'
+                                                               class="btn btn-primary btn-md" value="评论" >
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4" >
+                            <div class="about animate-box"
+                                 style="background:#FFF url(/images/banner4.png) no-repeat top center">
+                                <div class="avatar"><img :src="head"
+                                                         class="img-circle " alt=""></div>
+                                <p class="abname"><span class="about_name">Heanny</span> |
+                                    <span class="about_user">[[name]]</span>
+                                </p>
+                                <p class="abposition">[[profession]]</p>
+                                <div class="abtext"><p style="text-align: center">[[ introduce]]</p>
+                                </div>
+                            </div>
+                            <div class="relevant animate-box">
+                                <div style="margin-left: 1em">
+                                    <h3 class="articles">
+                                        相关文章
+                                    </h3>
+                                    <ul class="articles_title ">
+                                        无                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                                        </div>
+            </div>
+            <!--正文 end-->
+        </aside>
+    </div>
+</div>
+
+<!-- jQuery -->
+<script src="/gg/js/jquery.min.js"></script>
+<script src="/http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
+<!-- jQuery Easing -->
+<script src="/gg/js/jquery.easing.1.3.js"></script>
+<!-- Bootstrap -->
+<script src="/gg/js/bootstrap.min.js"></script>
+<!-- Waypoints -->
+<script src="/gg/js/jquery.waypoints.min.js"></script>
+<!-- Flexslider -->
+<script src="/gg/js/jquery.flexslider-min.js"></script>
+
+<!-- MAIN JS -->
+
+
+<script src="/gg/js/user.js"></script>
+<!--加载动画啊啊啊啊 -->
+<script>
+    function loadMorePc() {
+        $('#P_comments ul li').show();
+        $('#P_comments ul h4').hide();
+    }
+</script>
+<!--加载js-->
+    </div>
+</body>
+</html>
+
+
