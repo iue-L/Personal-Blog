@@ -1,0 +1,35 @@
+﻿/*css jogger style pagination*/
+div.jogger {
+    padding: 2px;
+    margin: 7px;
+    font-family: "lucida sans unicode", "lucida grande", lucidagrande, "lucida sans", geneva, verdana, sans-serif;
+}
+
+div.jogger a {
+    padding: 0.5em 0.64em 0.43em 0.64em;
+    margin: 2px;
+    color: #fff;
+    background-color: #228896;
+    text-decoration: none;
+}
+
+div.jogger a:hover {
+    padding: 0.5em 0.64em 0.43em 0.64em;
+    margin: 2px;
+    color: #fff;
+    background-color: #de1818;
+}
+
+div.jogger a:active {
+    padding: 0.5em 0.64em 0.43em 0.64em;
+    margin: 2px;
+    color: #fff;
+    background-color: #de1818;
+}
+
+div.jogger span.current {
+    padding: 0.5em 0.64em 0.43em 0.64em;
+    margin: 2px;
+    color: #6d643c;
+    background-color: #f6efcc;
+}

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html xmlns:wb="http://open.weibo.com/wb">
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta name="referrer" content="no-referrer"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title> HeannyBlog | 个人博客</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="浪子"/>
+    <meta name="keywords"
+          content="浪子"/>
+    <!-- Facebook and Twitter integration -->
+    <meta property="og:title" content=""/>
+    <meta property="og:image" content=""/>
+    <meta property="og:url" content=""/>
+    <meta property="og:site_name" content=""/>
+    <meta property="og:description" content=""/>
+    <meta name="twitter:title" content=""/>
+    <meta name="twitter:image" content=""/>
+    <meta name="twitter:url" content=""/>
+    <meta name="twitter:card" content=""/>
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="/gg/css/animate.css">
+    <!-- Icomoon Icon Fonts-->
+    <link rel="stylesheet" href="/gg/css/icomoon.css">
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" href="/gg/css/bootstrap.css">
+    <!-- Flexslider  -->
+    <link rel="stylesheet" href="/gg/css/flexslider.css">
+    <!-- Theme style  -->
+    <link rel="stylesheet" href="/gg/css/style.css">
+    <link rel="stylesheet" href="/gg/css/blog.css">
+    <link rel="stylesheet" href="/gg/css/loading.css">
+    <link rel="stylesheet" href="/gg/css/page_style.css">
+    <!-- Modernizr JS -->
+    <script src="/gg/js/host.js"></script>
+    <script src="/gg/js/vue-2.5.16.js"></script>
+    <script src="/gg/js/axios-0.18.0.min.js"></script>
+    <script src="/gg/js/modernizr-2.6.2.min.js"></script>
+    <script>
+        var t={
+       getQueryString:function(name){
+          var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+          var r = window.location.search.substr(1).match(reg);
+          if(r!=null)
+            return  decodeURI(r[2]);
+            return null;
+       }
+   }
+
+        var cityId=t.getQueryString("id");//城市id
+        var user_id = sessionStorage.user_id || localStorage.user_id;
+        var token = sessionStorage.token || localStorage.token;
+        if (!(user_id && token)) {
+            location.href = '/gg/login.html?next=/gg/past/'+cityId+'.html?id='+cityId;
+        }
+    </script>
+    <!-- FOR IE9 below -->
+    <!--[if lt IE 9]>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div id="fh5co-page" >
+    <div class="app" v-cloak>
+    <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
+    <aside id="fh5co-aside" role="complementary" class="border js-fullheight">
+        <h1 id="fh5co-logo"><a href="/gg/blogs.html">HEANNY.CN</a></h1>
+        <nav id="fh5co-main-menu" role="navigation">
+            <ul >
+                   <li class="index_li"><a href="/gg/blogs.html">Home</a></li>
+                <li class="blog_li"><a href="/gg/blog.html">
+                        Blog<span class="badge blogNum">[[counts]]</span>
+                    </a></li>
+
+
+                <li class="gbook_li"><a href="/gg/gbook.html" title="留言">
+                        Gbook<span class="badge gbookNum">[[quantity]]</span>
+                    </a></li>
+
+                <li class="login_li"><a href="/gg/login.html">Sign In</a></li>
+              <li id='user_li'><a href='/gg/user.html' title='用户中心'>[[ name ]]</a></li>
+                <li id ='logo_li'><a href='#' @click="logout" title='注销'>LOGOUT</a> </li></ul></ul>
+        </nav>
+        <div class="fh5co-footer">
+
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <ul>
+                <li>
+                    <a href="#" target="_blank" id="Twitter" data-toggle="tooltip" data-placement="top" title="Twitter">
+                        <i class="icon-twitter2"></i></a>
+                </li>
+                <li>
+                    <a href="http://weibo.com/hua199501" target="_blank" id="WeiBo" data-toggle="tooltip"
+                       data-placement="top"
+                       title="WeiBo">
+                        <i class="icon-sina-weibo"></i></a>
+                </li>
+                <li>
+                    <a href="#" target="_blank" id="Linkedin" data-toggle="tooltip" data-placement="top"
+                       title="Linkedin">
+                        <i class="icon-linkedin22"></i></a>
+                </li>
+                <li>
+                    <a href="https://github.com/beichenyulu" target="_blank" id="Github" data-toggle="tooltip"
+                       data-placement="top" title="Github">
+                        <i class="icon-github"></i></a>
+                </li>
+            </ul>
+        </div>
+
+    </aside>
+
+    <div id="fh5co-main">
+        <aside id="fh5co-hero">
+            <!--正文-->
+            <div class=" col-padding animate-box fadeInLeft animated post_body" id="P_note_box">
+                <div class="row">
+                                            <div class="col-md-8">
+                            <div class="blog_title">
+                                <h1 class="fh5co-heading-colored animate-box" style="    padding-top: 10px;">
+                                                                         CentOS7 yum安装Apache(httpd)并实现多域名配置 <a class="blog_collect" href="javascript:collect(-1)"><img src="/images/collect.png" alt=""></a>                                </h1>
+                                <div class="animate-box fadeInLeft"
+                                     style="    padding-left: 20px;    padding-top: 10px;">
+                                    <span class="dtime" style="padding-left: 15px ">2019-04-11</span>
+                                    <span class="viewnum" style="padding-left: 15px ;margin-left: 30px;">
+									15658							</span>
+                                </div>
+                                <div class="cloud ">
+                                    <ul style="padding-top: 0 !important;">
+                                        <a href="javascropt:void(0);" class="animate-box">pycharm</a><a href="javascropt:void(0);" class="animate-box">破解</a>                                    </ul>
+                                </div>
+
+                            </div>
+                            <!--<div class='top_50'></div>-->
+                            <div class="col-md-12 col-xs-12 NoteBox" style="background-color: white">
+                                <div class="NoteBody animate-box">
+                                    <!--?= stripslashes($dataarr->content) ?-->
+
+                                                                       <!--?= stripslashes($dataarr->content) ?-->                                    <p style="margin-top: 0px; margin-bottom: 1.1em; padding: 0px; box-sizing: border-box; color: rgb(63, 63, 63); font-family: &#39;microsoft yahei&#39;; font-size: 15px; line-height: 35px; white-space: normal; background-color: rgb(255, 255, 255);">系统环境：本地服务器CentOS 7.2 x64</p><p style="margin-top: 0px; margin-bottom: 1.1em; padding: 0px; box-sizing: border-box; color: rgb(63, 63, 63); font-family: &#39;microsoft yahei&#39;; font-size: 15px; line-height: 35px; white-space: normal; background-color: rgb(255, 255, 255);">一、Apache(httpd)安装&nbsp;<br style="box-sizing: border-box;"/>安装</p><pre class="prettyprint" name="code" style="white-space: nowrap; word-wrap: break-word; box-sizing: border-box; position: relative; overflow-y: hidden; overflow-x: auto; margin-top: 0px; margin-bottom: 1.1em; font-family: &#39;Source Code Pro&#39;, monospace; padding: 5px 5px 5px 60px; line-height: 1.45; word-break: break-all; color: rgb(51, 51, 51); border: 0px solid rgb(136, 136, 136); border-radius: 0px; background-color: rgba(128, 128, 128, 0.0470588);">yum&nbsp;install&nbsp;httpd1</pre><p style="margin-top: 0px; margin-bottom: 1.1em; padding: 0px; box-sizing: border-box; color: rgb(63, 63, 63); font-family: &#39;microsoft yahei&#39;; font-size: 15px; line-height: 35px; white-space: normal; background-color: rgb(255, 255, 255);">设置自启</p><pre class="prettyprint" name="code" style="white-space: nowrap; word-wrap: break-word; box-sizing: border-box; position: relative; overflow-y: hidden; overflow-x: auto; margin-top: 0px; margin-bottom: 1.1em; font-family: &#39;Source Code Pro&#39;, monospace; padding: 5px 5px 5px 60px; line-height: 1.45; word-break: break-all; color: rgb(51, 51, 51); border: 0px solid rgb(136, 136, 136); border-radius: 0px; background-color: rgba(128, 128, 128, 0.0470588);">systemctl&nbsp;enable&nbsp;httpd.service1</pre><p style="margin-top: 0px; margin-bottom: 1.1em; padding: 0px; box-sizing: border-box; color: rgb(63, 63, 63); font-family: &#39;microsoft yahei&#39;; font-size: 15px; line-height: 35px; white-space: normal; background-color: rgb(255, 255, 255);">二、软件配置&nbsp;<br style="box-sizing: border-box;"/>编辑httpd.conf就够了，httpd.conf在/etc/httpd/conf中</p><pre class="prettyprint" name="code" style="white-space: nowrap; word-wrap: break-word; box-sizing: border-box; position: relative; overflow-y: hidden; overflow-x: auto; margin-top: 0px; margin-bottom: 1.1em; font-family: &#39;Source Code Pro&#39;, monospace; padding: 5px 5px 5px 60px; line-height: 1.45; word-break: break-all; color: rgb(51, 51, 51); border: 0px solid rgb(136, 136, 136); border-radius: 0px; background-color: rgba(128, 128, 128, 0.0470588);">vim&nbsp;/etc/httpd/conf/httpd.conf1</pre><p style="margin-top: 0px; margin-bottom: 1.1em; padding: 0px; box-sizing: border-box; color: rgb(63, 63, 63); font-family: &#39;microsoft yahei&#39;; font-size: 15px; line-height: 35px; white-space: normal; background-color: rgb(255, 255, 255);">1、用#注释掉以下两行（其实如果不注释，好像没有什么影响）</p><pre class="prettyprint" name="code" style="white-space: nowrap; word-wrap: break-word; box-sizing: border-box; position: relative; overflow-y: hidden; overflow-x: auto; margin-top: 0px; margin-bottom: 1.1em; font-family: &#39;Source Code Pro&#39;, monospace; padding: 5px 5px 5px 60px; line-height: 1.45; word-break: break-all; color: rgb(51, 51, 51); border: 0px solid rgb(136, 136, 136); border-radius: 0px; background-color: rgba(128, 128, 128, 0.0470588);">#ServerName&nbsp;www.example.com#DocumentRoot&nbsp;/var/www/html12</pre><p style="margin-top: 0px; margin-bottom: 1.1em; padding: 0px; box-sizing: border-box; color: rgb(63, 63, 63); font-family: &#39;microsoft yahei&#39;; font-size: 15px; line-height: 35px; white-space: normal; background-color: rgb(255, 255, 255);">2、开放目录使用权限&nbsp;<br style="box-sizing: border-box;"/>在httpd.conf中写入，引号中的路径是自定义的开放访问的路径，其子目录也开放使用。&nbsp;<br style="box-sizing: border-box;"/>如果不写这个段落，网页会被重定向到默认页面，虚拟主机中的自定义路径设置无效。&nbsp;<br style="box-sizing: border-box;"/>Directory里的东西必修要写，不写就打不开。。。亲测</p><pre class="prettyprint" name="code" style="white-space: nowrap; word-wrap: break-word; box-sizing: border-box; position: relative; overflow-y: hidden; overflow-x: auto; margin-top: 0px; margin-bottom: 1.1em; font-family: &#39;Source Code Pro&#39;, monospace; padding: 5px 5px 5px 60px; line-height: 1.45; word-break: break-all; color: rgb(51, 51, 51); border: 0px solid rgb(136, 136, 136); border-radius: 0px; background-color: rgba(128, 128, 128, 0.0470588);">&lt;Directory&nbsp;&quot;/home/www&quot;&gt;&nbsp;&nbsp;&nbsp;&nbsp;Options&nbsp;Indexes&nbsp;FollowSymLinks&nbsp;&nbsp;&nbsp;&nbsp;AllowOverride&nbsp;None&nbsp;&nbsp;&nbsp;&nbsp;Require&nbsp;all&nbsp;granted&lt;/Directory&gt;12345</pre><p style="margin-top: 0px; margin-bottom: 1.1em; padding: 0px; box-sizing: border-box; color: rgb(63, 63, 63); font-family: &#39;microsoft yahei&#39;; font-size: 15px; line-height: 35px; white-space: normal; background-color: rgb(255, 255, 255);">3、写入虚拟主机信息&nbsp;<br style="box-sizing: border-box;"/>①开启虚拟主机并确定其监听的主机名与端口，* 表示省略，80为网页默认端口。</p><pre class="prettyprint" name="code" style="white-space: nowrap; word-wrap: break-word; box-sizing: border-box; position: relative; overflow-y: hidden; overflow-x: auto; margin-top: 0px; margin-bottom: 1.1em; font-family: &#39;Source Code Pro&#39;, monospace; padding: 5px 5px 5px 60px; line-height: 1.45; word-break: break-all; color: rgb(51, 51, 51); border: 0px solid rgb(136, 136, 136); border-radius: 0px; background-color: rgba(128, 128, 128, 0.0470588);">NameVirtualHost&nbsp;*:801</pre><p style="margin-top: 0px; margin-bottom: 1.1em; padding: 0px; box-sizing: border-box; color: rgb(63, 63, 63); font-family: &#39;microsoft yahei&#39;; font-size: 15px; line-height: 35px; white-space: normal; background-color: rgb(255, 255, 255);">②写入单个虚拟主机信息&nbsp;<br style="box-sizing: border-box;"/>ServerName —— 主机名（域名或公网IP）&nbsp;<br style="box-sizing: border-box;"/>ServerAlias —— 别名（二级域名或其他域名或IP）&nbsp;<br style="box-sizing: border-box;"/>DocumentRoot —— 文件目录（表示将域名映射至该文件目录）。&nbsp;<br style="box-sizing: border-box;"/>按照模版有几个写几个，不知道有没有上限。。。&nbsp;<br style="box-sizing: border-box;"/>虚拟主机的文件目录必须在上述的开放访问的目录下，不然无法访问。&nbsp;<br style="box-sizing: border-box;"/>模版：</p><pre class="prettyprint" name="code" style="white-space: nowrap; word-wrap: break-word; box-sizing: border-box; position: relative; overflow-y: hidden; overflow-x: auto; margin-top: 0px; margin-bottom: 1.1em; font-family: &#39;Source Code Pro&#39;, monospace; padding: 5px 5px 5px 60px; line-height: 1.45; word-break: break-all; color: rgb(51, 51, 51); border: 0px solid rgb(136, 136, 136); border-radius: 0px; background-color: rgba(128, 128, 128, 0.0470588);">&lt;VirtualHost&nbsp;*:80&gt;&nbsp;&nbsp;&nbsp;&nbsp;ServerName&nbsp;XXX&nbsp;&nbsp;&nbsp;&nbsp;ServerAlias&nbsp;XXX2&nbsp;&nbsp;&nbsp;&nbsp;DocumentRoot&nbsp;/XXX&lt;/VirtualHost&gt;123456</pre><p style="margin-top: 0px; margin-bottom: 1.1em; padding: 0px; box-sizing: border-box; color: rgb(63, 63, 63); font-family: &#39;microsoft yahei&#39;; font-size: 15px; line-height: 35px; white-space: normal; background-color: rgb(255, 255, 255);">三、完整过程&nbsp;<br style="box-sizing: border-box;"/>示例仅供参考，如有其他需要，请根据情况自行修改。&nbsp;<br style="box-sizing: border-box;"/>1、控制台命令</p><pre class="prettyprint" name="code" style="white-space: nowrap; word-wrap: break-word; box-sizing: border-box; position: relative; overflow-y: hidden; overflow-x: auto; margin-top: 0px; margin-bottom: 1.1em; font-family: &#39;Source Code Pro&#39;, monospace; padding: 5px 5px 5px 60px; line-height: 1.45; word-break: break-all; color: rgb(51, 51, 51); border: 0px solid rgb(136, 136, 136); border-radius: 0px; background-color: rgba(128, 128, 128, 0.0470588);">yum&nbsp;install&nbsp;httpdsystemctl&nbsp;enable&nbsp;httpd.servicesystemctl&nbsp;start&nbsp;httpd.servicevim&nbsp;/etc/httpd/conf/httpd.conf12345</pre><p style="margin-top: 0px; margin-bottom: 1.1em; padding: 0px; box-sizing: border-box; color: rgb(63, 63, 63); font-family: &#39;microsoft yahei&#39;; font-size: 15px; line-height: 35px; white-space: normal; background-color: rgb(255, 255, 255);">2、httpd.conf修改（略去不用修改的部分）</p><pre class="prettyprint" name="code" style="white-space: nowrap; word-wrap: break-word; box-sizing: border-box; position: relative; overflow-y: hidden; overflow-x: auto; margin-top: 0px; margin-bottom: 1.1em; font-family: &#39;Source Code Pro&#39;, monospace; padding: 5px 5px 5px 60px; line-height: 1.45; word-break: break-all; color: rgb(51, 51, 51); border: 0px solid rgb(136, 136, 136); border-radius: 0px; background-color: rgba(128, 128, 128, 0.0470588);">#ServerName&nbsp;www.example.com#DocumentRoot&nbsp;/var/www/html&lt;Directory&nbsp;&quot;/home/www&quot;&gt;&nbsp;&nbsp;&nbsp;&nbsp;Options&nbsp;Indexes&nbsp;FollowSymLinks&nbsp;&nbsp;&nbsp;&nbsp;AllowOverride&nbsp;None&nbsp;&nbsp;&nbsp;&nbsp;Require&nbsp;all&nbsp;granted&lt;/Directory&gt;NameVirtualHost&nbsp;*:80&lt;VirtualHost&nbsp;*:80&gt;&nbsp;&nbsp;&nbsp;&nbsp;ServerName&nbsp;www.mywebsite1.com&nbsp;&nbsp;&nbsp;&nbsp;DocumentRoot&nbsp;/home/www/htmla&lt;/VirtualHost&gt;&lt;VirtualHost&nbsp;*:80&gt;&nbsp;&nbsp;&nbsp;&nbsp;ServerName&nbsp;mywebsite1.com&nbsp;&nbsp;&nbsp;&nbsp;DocumentRoot&nbsp;/home/www/htmlb&lt;/VirtualHost&gt;&lt;VirtualHost&nbsp;*:80&gt;&nbsp;&nbsp;&nbsp;&nbsp;ServerName&nbsp;www.mywebsite2.com&nbsp;&nbsp;&nbsp;&nbsp;ServerAlias&nbsp;mywebsite2.com&nbsp;&nbsp;&nbsp;&nbsp;DocumentRoot&nbsp;/home/www/htmlc&lt;/VirtualHost&gt;</pre><p><br/></p>                                    <br/>                                    <wb:share-button appkey="4275131013" addition="simple" type="button"                                                     ralateUid="2247236875"></wb:share-button>                                
+
+
+
+
+                            </div>
+                            </div>
+                            <!--相邻文章-->
+                            <div class="fh5co-narrow-content animate-box" data-animate-effect="fadeInLeft"
+                                 style="padding: 4em 0 0 0;">
+                                <h4><a href="#" ></a></h4><h4><a href="#" ></a></h4>                            </div>
+                            <!--相邻文章 end-->
+                            <!--全部评论-->
+                            <div class="fh5co-narrow-content animate-box" data-animate-effect="fadeInLeft"
+                                 id="P_comments"
+                                 style="padding: 1em 0 !important;">
+                                <div class="row">
+                                    <div class="CommentJq">
+                                        <ul v-if="stack" class="list  animate-box linlimeng" data-animate-effect="fadeInLeft">
+
+                                            <li v-for="value in stack" class="animate-box col-xs-12 col-md-12 fadeInLeft animated"
+                                                        data-animate-effect="fadeInLeft"
+                                                        id="P_com_0">
+                                                        <div class="col-md-2 col-xs-2 col-lg-2">
+                                                            <img :src="value.user.head" style="height: 4em;width: 4em;"
+                                                                 class="img-circle"/>
+                                                        </div>
+                                                        <div class="col-md-10 col-xs-10 col-lg-10" style=";position: relative;">
+                                                            <a>[[value.user.name]]</a>
+                                                            <small style="margin-left: 1em">[[value.time]]</small>
+                                                            <p style="margin: 10px auto">[[value.text]]
+</p>
+                                                        </div>
+                                                    </li>
+
+
+                                        </ul>
+                                        <ul v-else class="list  animate-box" data-animate-effect="fadeInLeft">
+
+                                        </ul>
+                                        <div class="more col-xs-8 col-md-10  animate-box " style="display: none;"
+                                             id="ComMore"
+                                             data-animate-effect="fadeInLeft">
+                                            <a href="javascript:void (0);" onClick="CommentJq.loadMore();">加载更多</a>
+                                        </div>
+                                        <div class="comment_box animate-box" data-animate-effect="fadeInLeft"
+                                             id="P_comment_box">
+                                            <h4>Submit your comments</h4>
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                <textarea name="" id="P_message" v-model="commentss" cols="30" rows="7" class="form-control"
+                                                          placeholder="Comment"></textarea>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input type="button" @click='comments'
+                                                               class="btn btn-primary btn-md" value="评论" >
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4" >
+                            <div class="about animate-box"
+                                 style="background:#FFF url(/images/banner4.png) no-repeat top center">
+                                <div class="avatar"><img :src="head"
+                                                         class="img-circle " alt=""></div>
+                                <p class="abname"><span class="about_name">Heanny</span> |
+                                    <span class="about_user">[[name]]</span>
+                                </p>
+                                <p class="abposition">[[profession]]</p>
+                                <div class="abtext"><p style="text-align: center">[[ introduce]]</p>
+                                </div>
+                            </div>
+                            <div class="relevant animate-box">
+                                <div style="margin-left: 1em">
+                                    <h3 class="articles">
+                                        相关文章
+                                    </h3>
+                                    <ul class="articles_title ">
+                                        无                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                                        </div>
+            </div>
+            <!--正文 end-->
+        </aside>
+    </div>
+</div>
+
+<!-- jQuery -->
+<script src="/gg/js/jquery.min.js"></script>
+<script src="/http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
+<!-- jQuery Easing -->
+<script src="/gg/js/jquery.easing.1.3.js"></script>
+<!-- Bootstrap -->
+<script src="/gg/js/bootstrap.min.js"></script>
+<!-- Waypoints -->
+<script src="/gg/js/jquery.waypoints.min.js"></script>
+<!-- Flexslider -->
+<script src="/gg/js/jquery.flexslider-min.js"></script>
+
+<!-- MAIN JS -->
+
+
+<script src="/gg/js/user.js"></script>
+<!--加载动画啊啊啊啊 -->
+<script>
+    function loadMorePc() {
+        $('#P_comments ul li').show();
+        $('#P_comments ul h4').hide();
+    }
+</script>
+<!--加载js-->
+    </div>
+</body>
+</html>
+
+
