@@ -2,7 +2,669 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c5a3636e-730c-476e-8c8f-b1ccee50ccf1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/个人博客.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/.qiniu_pythonsdk_hostscache.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/1.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/apps/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/apps/news/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/apps/news/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/apps/news/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/apps/news/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/apps/news/migrations/0002_blog_user.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/apps/news/migrations/0003_blog_img.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/apps/news/migrations/0004_auto_20190412_1112.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/apps/news/migrations/0005_blog_top.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/apps/news/migrations/0006_auto_20190412_2214.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/apps/news/migrations/0007_auto_20190412_2227.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/apps/news/migrations/0008_auto_20190413_1456.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/apps/news/migrations/0009_auto_20190414_1934.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/apps/news/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/apps/news/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/apps/news/serializers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/apps/news/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/apps/news/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/apps/news/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/apps/oauth/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/apps/oauth/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/apps/oauth/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/apps/oauth/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/apps/oauth/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/apps/oauth/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/apps/oauth/serializers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/apps/oauth/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/apps/oauth/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/apps/oauth/utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/apps/oauth/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/apps/users/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/apps/users/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/apps/users/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/apps/users/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/apps/users/migrations/0002_user_gender.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/apps/users/migrations/0003_auto_20190410_1434.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/apps/users/migrations/0004_auto_20190410_1513.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/apps/users/migrations/0005_auto_20190410_1802.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/apps/users/migrations/0006_auto_20190410_1915.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/apps/users/migrations/0007_auto_20190413_1456.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/apps/users/migrations/0008_auto_20190413_1503.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/apps/users/migrations/0009_auto_20190413_1616.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/apps/users/migrations/0010_auto_20190414_1107.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/apps/users/migrations/0011_userz_apply.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/apps/users/migrations/0012_user_bolg_sid.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/apps/users/migrations/0013_message.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/apps/users/migrations/0014_user_administrator.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/apps/users/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/apps/users/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/apps/users/serializers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/apps/users/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/apps/users/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/apps/users/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/blogs/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/blogs/settings.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/blogs/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/blogs/wsgi.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/celery_tasks/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/celery_tasks/config.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/celery_tasks/email/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/celery_tasks/email/tasks.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/celery_tasks/html/tasks.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/celery_tasks/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/db.sqlite3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/libs/yuntongxun/CCPRestSDK.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/libs/yuntongxun/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/libs/yuntongxun/sms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/libs/yuntongxun/xmltojson.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/logs/meiduo.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/manage.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/templates/post.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/utils/.qiniu_pythonsdk_hostscache.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/utils/exceptions.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/utils/fastdfs/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/utils/fastdfs/client.conf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/utils/fastdfs/fdfs_storage.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/utils/image_storage.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/utils/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/utils/pagination.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/utils/users.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/Tpl/Individual/Style/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/Tpl/Individual/Style/img/bg.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/Tpl/Individual/Style/index/video/video.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/about.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/addblog.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/assets/css/font-awesome.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/assets/css/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/assets/fonts/FontAwesome.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/assets/fonts/fontawesome-webfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/assets/fonts/fontawesome-webfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/assets/fonts/fontawesome-webfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/assets/fonts/fontawesome-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/assets/fonts/fontawesome-webfont.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/assets/js/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/assets/js/jquery.poptrox.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/assets/js/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/assets/js/skel.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/assets/js/util.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/assetss/css/font-awesome.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/assetss/css/images/arrow-small.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/assetss/css/images/arrow.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/assetss/css/images/close-small-alt.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/assetss/css/images/close-small.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/assetss/css/images/close.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/assetss/css/images/open-small.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/assetss/css/images/open.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/assetss/css/images/spinner.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/assetss/css/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/assetss/css/noscript.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/assetss/fonts/FontAwesome.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/assetss/fonts/fontawesome-webfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/assetss/fonts/fontawesome-webfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/assetss/fonts/fontawesome-webfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/assetss/fonts/fontawesome-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/assetss/fonts/fontawesome-webfont.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/assetss/js/breakpoints.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/assetss/js/browser.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/assetss/js/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/assetss/js/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/assetss/sass/base/_page.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/assetss/sass/base/_reset.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/assetss/sass/base/_typography.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/assetss/sass/components/_actions.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/assetss/sass/components/_button.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/assetss/sass/components/_form.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/assetss/sass/components/_icon.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/assetss/sass/components/_icons.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/assetss/sass/components/_list.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/assetss/sass/layout/_footer.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/assetss/sass/layout/_header.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/assetss/sass/layout/_main.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/assetss/sass/layout/_thumbnails.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/assetss/sass/layout/_viewer.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/assetss/sass/libs/_breakpoints.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/assetss/sass/libs/_functions.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/assetss/sass/libs/_mixins.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/assetss/sass/libs/_vars.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/assetss/sass/libs/_vendor.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/assetss/sass/main.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/assetss/sass/noscript.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/css/font-awesome.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/css/hover-min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/css/owl.carousel.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/css/owl.theme.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/fonts/FontAwesome.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/fonts/flexslider-icon.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/fonts/flexslider-icon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/fonts/flexslider-icon.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/fonts/flexslider-icon.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/fonts/fontawesome-webfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/fonts/fontawesome-webfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/fonts/fontawesome-webfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/fonts/fontawesome-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/fonts/icomoon.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/fonts/icomoon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/fonts/icomoon.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/fonts/icomoon.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/fonts/kfokcnqeu92fr1mmgvxiizc.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/fonts/kfolcnqeu92fr1mmeu9fbbc9.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/fonts/kfolcnqeu92fr1mmsu5fbbc9.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/fonts/kfolcnqeu92fr1mmwulfbbc9.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/fonts/kfomcnqeu92fr1mu4mxp.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/fonts/s6u9w4bmutphh6uvswipha.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/fonts/s6u9w4bmutphh7usswipha.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/fonts/s6uyw4bmutphjx4www.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/friends.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/about.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/addblog.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/blog.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/blogs.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/chat.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/css/2d5c7a0ef08a46e7ab941f150b0fe0d4.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/css/animate.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/css/blog.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/css/bootstrap-fileinput.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/css/bootstrap-switch.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/css/button_style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/css/cascade.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/css/chat-style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/css/component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/css/dbd89748e69446d99868727a6e2f3945.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/css/flexslider.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/css/font-awesome.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/css/gbook.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/css/hover-min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/css/icomoon.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/css/live2d.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/css/loading.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/css/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/css/owl.carousel.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/css/owl.theme.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/css/page_style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/css/reset.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/css/style1.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/detail-38.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/fonts/flexslider-icon.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/fonts/flexslider-icon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/fonts/flexslider-icon.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/fonts/flexslider-icon.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/fonts/icomoon.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/fonts/icomoon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/fonts/icomoon.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/fonts/icomoon.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/fonts/icomoon/icomoon.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/fonts/icomoon/icomoon.ttf_srf3rx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/fonts/icomoon/icomoon.woff_srf3rx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/fonts/kfokcnqeu92fr1mmgvxiizc.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/fonts/kfolcnqeu92fr1mmeu9fbbc9.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/fonts/kfolcnqeu92fr1mmsu5fbbc9.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/fonts/kfolcnqeu92fr1mmwulfbbc9.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/fonts/kfomcnqeu92fr1mu4mxp.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/fonts/s6u9w4bmutphh6uvswipha.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/fonts/s6u9w4bmutphh7usswipha.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/fonts/s6uyw4bmutphjx4www.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/gbook.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/hamster.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/images/ + value.imgurl +" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/images/107999441002580.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/images/12312421512.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/images/1812191426541545200814573620.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/images/1812191438161545201496631353.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/images/1812191440101545201610649124.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/images/1903121535161552376116292205.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/images/arrow.cur" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/images/banner.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/images/banner3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/images/banner4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/images/error2.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/images/loader.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/images/loading3.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/images/mouse/Arrow.cur" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/images/mouse/Normal.cur" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/images/newsbg01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/images/newsbg02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/images/newsbg03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/images/newsbg04.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/images/r_title_bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/images/robot.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/images/slide-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/images/top.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/js/1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/js/11.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/js/HeannyAdd.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/js/adsbygoogle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/js/axios-0.18.0.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/js/blog_get.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/js/bootstrap-fileinput.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/js/bootstrap-switch.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/js/cascade.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/js/chat.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/js/classie.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/js/details.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/js/host.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/js/imgout.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/js/jquery.easing.1.3.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/js/jquery.flexslider-min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/js/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/js/jquery.waypoints.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/js/login.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/js/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/js/modernizr-2.6.2.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/js/oauth_callback.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/js/ootstrap-switch.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/js/post.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/js/post_get.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/js/preload.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/js/respond.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/js/snap.svg-min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/js/svgloader.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/js/totop.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/js/uediter/g.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/js/uediter/lang/zh-cn/zh-cn.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/js/uediter/themes/default/css/ueditor.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/js/uediter/themes/default/images/charts.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/js/uediter/themes/default/images/icons.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/js/uediter/themes/default/images/scale.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/js/uediter/themes/iframe.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/js/uediter/third-party/codemirror/codemirror.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/js/uediter/third-party/codemirror/codemirror.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/js/uediter/third-party/zeroclipboard/ZeroClipboard.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/js/uediter/ueditor.all.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/js/uediter/ueditor.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/js/user.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/js/vue-2.5.16.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/js/wb.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/450.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/451.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/452.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/453.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/454.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/455.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/456.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/457.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/458.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/459.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/460.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/461.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/462.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/463.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/464.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/465.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/466.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/467.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/468.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/469.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/470.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/471.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/472.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/473.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/474.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/475.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/476.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/477.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/478.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/479.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/480.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/481.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/482.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/483.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/484.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/485.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/486.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/487.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/488.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/489.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/490.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/491.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/492.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/493.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/494.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/495.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/496.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/497.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/498.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/499.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/500.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/501.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/502.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/503.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/504.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/505.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/506.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/507.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/508.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/509.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/510.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/511.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/512.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/513.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/514.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/515.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/516.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/517.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/518.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/519.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/520.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/521.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/522.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/523.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/524.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/525.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/526.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/527.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/528.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/529.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/530.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/531.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/532.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/533.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/534.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/535.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/536.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/537.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/538.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/539.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/540.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/541.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/542.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/543.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/544.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/545.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/546.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/547.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/548.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/549.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/550.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/551.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/552.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/553.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/554.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/555.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/556.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/557.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/558.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/559.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/560.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/561.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/562.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/563.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/564.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/565.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/566.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/567.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/568.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/569.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/570.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/571.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/572.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/573.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/574.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/575.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/576.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/577.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/578.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/579.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/580.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/581.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/582.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/583.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/584.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/585.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/586.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/587.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/588.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/589.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/590.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/591.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/592.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/593.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/594.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/595.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/627.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/628.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/past/629.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/picture/1535871473.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/picture/1812191443181545201798204534.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/picture/1812191444181545201858514239.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/picture/1812191452021545202322888488.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/picture/1812191452381545202358849267.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/picture/1812191504301545203070553488.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/picture/1812191505141545203114891592.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/picture/1812191506091545203169107498.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/picture/1812191506581545203218306021.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/picture/1812191507441545203264559036.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/picture/1812191508291545203309388418.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/picture/1812191525451545204345393225.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/picture/1812211449031545374943185583.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/picture/1812311749431546249783603009.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/picture/1812311837121546252632936773.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/picture/1812311839511546252791285009.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/picture/1901070936271546824987124417.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/picture/1901281356401548655000889862.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/picture/1903041105101551668710479248.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/picture/1903051025511551752751166329.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/picture/1903101716261552209386835891.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/picture/about1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/picture/about2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/picture/avatar.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/picture/default1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/picture/default2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/picture/default3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/picture/default4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/picture/default5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/picture/default6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/picture/default7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/picture/encryption.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/picture/error2.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/picture/fcf1c58b98b74de8c042309853867e2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/picture/giteelogo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/picture/githublogo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/picture/img-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/picture/loading.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/picture/qqlogo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/picture/run.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/picture/wechat.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/picture/weibologo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/picture/zd01.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/portfolio.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/post.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/shares.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/swf/hamster.swf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/tag.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/update/HeadPortrait/1904081148091554695289943283.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/gg/user.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/images/ + value.imgurl +" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/images/107999441002580.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/images/12312421512.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/images/1812191426541545200814573620.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/images/1812191438161545201496631353.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/images/1812191440101545201610649124.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/images/1903121535161552376116292205.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/images/arrow.cur" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/images/banner.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/images/banner3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/images/banner4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/images/bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/images/fulls/01.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/images/fulls/02.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/images/fulls/03.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/images/fulls/04.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/images/fulls/05.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/images/fulls/06.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/images/fulls/07.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/images/fulls/08.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/images/fulls/09.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/images/fulls/10.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/images/fulls/11.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/images/fulls/12.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/images/loader.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/images/loading3.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/images/mouse/Normal.cur" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/images/newsbg01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/images/newsbg02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/images/newsbg03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/images/newsbg04.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/images/pic01.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/images/pic02.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/images/pic03.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/images/pic04.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/images/pic05.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/images/pic06.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/images/pic07.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/images/pic08.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/images/r_title_bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/images/slide-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/images/thumbs/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/images/thumbs/10.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/images/thumbs/10的副本.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/images/thumbs/11.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/images/thumbs/12.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/images/thumbs/2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/images/thumbs/3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/images/thumbs/4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/images/thumbs/5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/images/thumbs/6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/images/thumbs/7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/images/thumbs/8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/images/thumbs/9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/images/top.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/img/a2vatar500x680.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/img/adam.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/img/avatar500x680.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/img/ben.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/img/bg1280x788.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/img/cube.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/img/mike.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/img/project_1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/img/project_2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/img/project_3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/img/project_4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/js/1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/js/classie.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/js/jquery.countTo.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/js/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/js/jquery.mobilegmap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/js/jquery.waypoints.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/js/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/js/owl.carousel.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/js/scrollreveal.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/js/smooth-scroll.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/js/typed.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/js/uediter/lang/zh-cn/zh-cn.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/js/uediter/themes/default/css/ueditor.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/js/uediter/themes/default/images/charts.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/js/uediter/themes/default/images/icons.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/js/uediter/themes/default/images/scale.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/js/uediter/themes/iframe.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/js/uediter/third-party/codemirror/codemirror.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/js/uediter/third-party/codemirror/codemirror.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/js/uediter/third-party/zeroclipboard/ZeroClipboard.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/js/uediter/ueditor.all.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/js/uediter/ueditor.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/oauth_callback.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/personage.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/picture.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/style/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/style/css/img/1px.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/style/css/img/bg1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/style/css/img/bg2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/style/css/img/bg3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/style/css/img/bg4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/style/css/img/bg5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/style/css/img/glyphicons-halflings-regular.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/style/css/img/glyphicons-halflings-regular.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/style/css/img/glyphicons-halflings-regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/style/css/img/glyphicons-halflings-regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/style/css/img/glyphicons-halflings-regular.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/style/css/img/glyphicons-halflings-regular01.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/style/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/style/images/logo.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/style/images/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/style/images/logo2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/style/images/tech-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/style/images/tech.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/style/images/timg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/style/js/GeeYo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/style/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/style/js/gb2big5.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/style/js/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/style/js/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/style/js/tether.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/tracks.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/travel.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/vip/2/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/vip/2/163logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/vip/2/1905logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/vip/2/2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/vip/2/3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/vip/2/4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/vip/2/56logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/vip/2/6logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/vip/2/aqylogo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/vip/2/baomihualogo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/vip/2/cntvlogo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/vip/2/gg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/vip/2/hunantvlogo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/vip/2/ifenglogo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/vip/2/kankannewslogo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/vip/2/ku6logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/vip/2/kugoulogo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/vip/2/kuwologo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/vip/2/letvlogo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/vip/2/mtimelogo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/vip/2/qqlogo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/vip/2/sinalogo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/vip/2/sohulogo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/vip/2/tangdoulogo (1).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/vip/2/tangdoulogo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/vip/2/tudoulogo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/vip/2/wasulogo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/vip/2/yinyuetailogo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/vip/2/youkulogo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/vip/images/jquery-1.7.1.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/vip/images/jquery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/vip/images/newcommons.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/vip/images/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/vip/images/ty.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/vip/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/vip/js/gotop.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,8 +680,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/blogs/manage.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="15" column="30" lean-forward="true" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
+            <state relative-caret-position="106">
+              <caret line="16" column="65" lean-forward="true" selection-start-line="16" selection-start-column="65" selection-end-line="16" selection-end-column="65" />
             </state>
           </provider>
         </entry>
@@ -204,17 +866,25 @@
       <workItem from="1557795239985" duration="796000" />
       <workItem from="1557796046075" duration="1836000" />
       <workItem from="1559299720212" duration="804000" />
+      <workItem from="1559301248671" duration="243000" />
     </task>
+    <task id="LOCAL-00001" summary="Blog">
+      <created>1559301483076</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1559301483076</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3436000" />
+    <option name="totallyTimeSpent" value="3679000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="64" y="-11" width="1853" height="913" extended-state="7" />
-    <editor active="true" />
+    <frame x="64" y="-11" width="1853" height="913" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16916251" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17138103" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -228,7 +898,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.6036036" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.6036036" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -239,6 +909,10 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Blog" />
+    <option name="LAST_COMMIT_MESSAGE" value="Blog" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/blogs/utils/models.py">
@@ -291,63 +965,17 @@
     <entry file="file://$PROJECT_DIR$/blogs/utils/fastdfs/client.conf">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/首页/index.html">
+    <entry file="file://$PROJECT_DIR$/首页/index.html" />
+    <entry file="file://$PROJECT_DIR$/首页/personage.html" />
+    <entry file="file://$PROJECT_DIR$/首页/gg/blog.html" />
+    <entry file="file://$PROJECT_DIR$/首页/gg/blogs.html" />
+    <entry file="file://$PROJECT_DIR$/首页/gg/gbook.html" />
+    <entry file="file://$PROJECT_DIR$/首页/friends.html" />
+    <entry file="file://$PROJECT_DIR$/首页/tracks.html" />
+    <entry file="file://$PROJECT_DIR$/blogs/manage.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1488">
-          <caret line="48" column="30" selection-start-line="48" selection-start-column="30" selection-end-line="48" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/首页/personage.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3255">
-          <caret line="105" column="21" selection-start-line="105" selection-start-column="21" selection-end-line="105" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/首页/gg/blog.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4464">
-          <caret line="144" column="19" selection-start-line="144" selection-start-column="19" selection-end-line="144" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/首页/gg/blogs.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17112">
-          <caret line="552" column="22" selection-start-line="552" selection-start-column="22" selection-end-line="552" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/首页/gg/gbook.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="11780">
-          <caret line="380" column="23" selection-start-line="380" selection-start-column="23" selection-end-line="380" selection-end-column="23" />
-          <folding>
-            <element signature="n#style#0;n#span#1;n#div#0;n#div#0;n#div#5;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#aside#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#6;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#aside#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#1;n#div#0;n#div#0;n#div#6;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#aside#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#7;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#aside#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#1;n#div#0;n#div#0;n#div#7;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#aside#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#10;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#aside#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#1;n#div#0;n#div#0;n#div#10;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#aside#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#p#0;n#div#0;n#div#12;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#aside#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#13;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#aside#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#1;n#div#0;n#div#0;n#div#13;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#aside#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#14;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#aside#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#1;n#div#0;n#div#0;n#div#14;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#aside#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#17;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#aside#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#1;n#div#0;n#div#0;n#div#17;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#aside#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#19;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#aside#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#1;n#div#0;n#div#0;n#div#19;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#aside#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/首页/friends.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1891">
-          <caret line="61" column="31" selection-start-line="61" selection-start-column="31" selection-end-line="61" selection-end-column="31" />
+        <state relative-caret-position="106">
+          <caret line="16" column="65" lean-forward="true" selection-start-line="16" selection-start-column="65" selection-end-line="16" selection-end-column="65" />
         </state>
       </provider>
     </entry>
@@ -362,23 +990,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/blogs/utils/fastdfs/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/首页/tracks.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1147">
-          <caret line="37" column="66" selection-start-line="37" selection-start-column="61" selection-end-line="37" selection-end-column="66" />
-          <folding>
-            <element signature="n#style#0;n#canvas#0;n#div#0;n#div#0;n#section#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blogs/manage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="15" column="30" lean-forward="true" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
-        </state>
-      </provider>
     </entry>
   </component>
 </project>
