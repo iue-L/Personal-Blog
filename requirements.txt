@@ -16,7 +16,7 @@ fdfs-client-py==1.2.6
 idna==2.8
 itsdangerous==1.1.0
 kombu==4.5.0
-lxml==4.3.3
+lxml==4.6.2
 mutagen==1.42.0
 Pillow==6.0.0
 PyJWT==1.7.1
